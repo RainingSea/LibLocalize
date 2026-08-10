@@ -9,4 +9,4 @@ lean_lib ExternalAPI where
 lean_lib «LeanCopilot» where
   srcDir := "."
 
-require batteries from git "https://github.com/leanprover-community/batteries.git" @ "main"
+require batteries from git "https://github.com/leanprover-community/batteries.git" @ "v4.33.0"
