@@ -10,8 +10,8 @@ from lean_dojo_v2.database import DynamicDatabase
 
 
 def main() -> None:
-    path = "path/to/lean4-example"
-    commit = "3e23ab0bfdcfdbd5b11ab53c2cd8b5d16492e9c2"
+    path = "/home/yangronghui/projects/LeanDojo-v2/examples/data_generation/cslib"
+    commit = "c7944a9fb44c3298f1a960a5e574ab23a6ab8ed5"
 
     database = DynamicDatabase()
 

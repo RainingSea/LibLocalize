@@ -164,8 +164,9 @@ repl/
 dynamic_database.json
 *.jsonl
 *.ckpt
-*.json
 
 raid/
 
 outputs-*
+access_token.txt
+cslib/

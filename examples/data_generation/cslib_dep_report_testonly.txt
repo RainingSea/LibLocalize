@@ -1,0 +1,3082 @@
+======================================================================
+定理-Premise 依赖分析报告
+======================================================================
+输入: raid/data/cslib_c7944a9fb44c3298f1a960a5e574ab23a6ab8ed5/random/test.json
+定理总数: 287 | 定理间依赖边: 34 | 去重后外部premise: 186
+
+----------------------------------------------------------------------
+一、DAG 视角(拓扑分层; L=k 表示依赖链最长深度为 k)
+----------------------------------------------------------------------
+[L0] Cslib.Algorithms.Lean.TimeM.clog2_floor_half_le  (Cslib/Algorithms/Lean/MergeSort/MergeSort.lean:134-139)
+      依赖定理: (基础定理)
+[L0] Cslib.Algorithms.Lean.TimeM.mem_either_merge  (Cslib/Algorithms/Lean/MergeSort/MergeSort.lean:78-79)
+      依赖定理: (基础定理)
+[L0] Cslib.Algorithms.Lean.TimeM.mergeSort_correct  (Cslib/Algorithms/Lean/MergeSort/MergeSort.lean:110-111)
+      依赖定理: (基础定理)
+[L0] Cslib.Algorithms.Lean.TimeM.mergeSort_sorted  (Cslib/Algorithms/Lean/MergeSort/MergeSort.lean:89-93)
+      依赖定理: (基础定理)
+[L0] Cslib.Algorithms.Lean.TimeM.ret_bind  (Cslib/Algorithms/Lean/TimeM.lean:97-98)
+      依赖定理: (基础定理)
+[L0] Cslib.Algorithms.Lean.TimeM.ret_seqLeft  (Cslib/Algorithms/Lean/TimeM.lean:102-103)
+      依赖定理: (基础定理)
+[L0] Cslib.Algorithms.Lean.TimeM.time_seq  (Cslib/Algorithms/Lean/TimeM.lean:115-116)
+      依赖定理: (基础定理)
+[L0] Cslib.Automata.Acceptor.mem_language  (Cslib/Computability/Automata/Acceptors/Acceptor.lean:34-35)
+      依赖定理: (基础定理)
+[L0] Cslib.Automata.DA.buchi_eq_finAcc_omegaLim  (Cslib/Computability/Automata/DA/Buchi.lean:26-29)
+      依赖定理: (基础定理)
+[L0] Cslib.Automata.DA.run_succ  (Cslib/Computability/Automata/DA/Basic.lean:61-63)
+      依赖定理: (基础定理)
+[L0] Cslib.Automata.DA.run_zero  (Cslib/Computability/Automata/DA/Basic.lean:56-58)
+      依赖定理: (基础定理)
+[L0] Cslib.Automata.NA.Buchi.buchiCongruence_fin_index  (Cslib/Computability/Languages/Congruences/BuchiCongruence.lean:74-75)
+      依赖定理: (基础定理)
+[L0] Cslib.Automata.NA.Buchi.buchiFamily_saturation  (Cslib/Computability/Languages/Congruences/BuchiCongruence.lean:179-227)
+      依赖定理: (基础定理)
+[L0] Cslib.Automata.NA.Buchi.inter_language_eq  (Cslib/Computability/Automata/NA/BuchiInter.lean:99-133)
+      依赖定理: Cslib.Automata.NA.Buchi.inter_freq_comp_acc_freq_acc
+[L0] Cslib.Automata.NA.Buchi.reindex_language_eq  (Cslib/Computability/Automata/NA/BuchiEquiv.lean:56-68)
+      依赖定理: (基础定理)
+[L0] Cslib.Automata.NA.FinAcc.toDAFinAcc_language_eq  (Cslib/Computability/Automata/NA/ToDA.lean:42-47)
+      依赖定理: (基础定理)
+[L0] Cslib.Automata.NA.concat_run_right  (Cslib/Computability/Automata/NA/Concat.lean:63-76)
+      依赖定理: (基础定理)
+[L0] Cslib.Automata.NA.loop_run_exists  (Cslib/Computability/Automata/NA/Loop.lean:125-133)
+      依赖定理: Cslib.Automata.NA.loop_fin_run_mtr
+[L0] Cslib.Automata.NA.loop_run_left_right_left  (Cslib/Computability/Automata/NA/Loop.lean:63-71)
+      依赖定理: Cslib.Automata.NA.loop_run_left_right
+[L0] Cslib.Automata.NA.totalize_run_mtr  (Cslib/Computability/Automata/NA/Total.lean:33-42)
+      依赖定理: (基础定理)
+[L0] Cslib.Automata.εNA.FinAcc.toNAFinAcc_language_eq  (Cslib/Computability/Automata/EpsilonNA/ToNA.lean:50-57)
+      依赖定理: Cslib.LTS.noε_saturate_mTr
+[L0] Cslib.Automata.ωAcceptor.mem_language  (Cslib/Computability/Automata/Acceptors/OmegaAcceptor.lean:33-34)
+      依赖定理: (基础定理)
+[L0] Cslib.CCS.Act.context_fill_def  (Cslib/Languages/CCS/Basic.lean:126-127)
+      依赖定理: (基础定理)
+[L0] Cslib.CCS.Act.isCo_iff  (Cslib/Languages/CCS/Basic.lean:89-90)
+      依赖定理: (基础定理)
+[L0] Cslib.CCS.Act.isVisible_neq_τ  (Cslib/Languages/CCS/Basic.lean:65-66)
+      依赖定理: (基础定理)
+[L0] Cslib.CCS.bisimilarity_choice_idem  (Cslib/Languages/CCS/BehaviouralTheory.lean:174-186)
+      依赖定理: (基础定理)
+[L0] Cslib.CCS.bisimilarity_congr_choice  (Cslib/Languages/CCS/BehaviouralTheory.lean:311-372)
+      依赖定理: (基础定理)
+[L0] Cslib.CCS.bisimilarity_par_comm  (Cslib/Languages/CCS/BehaviouralTheory.lean:64-71)
+      依赖定理: (基础定理)
+[L0] Cslib.Crypto.Protocols.PerfectSecrecy.EncScheme.perfectlySecret_keySpace_ge  (Cslib/Crypto/Protocols/PerfectSecrecy/Basic.lean:46-49)
+      依赖定理: (基础定理)
+[L0] Cslib.Crypto.Protocols.PerfectSecrecy.EncScheme.posteriorMsgDist_apply  (Cslib/Crypto/Protocols/PerfectSecrecy/Defs.lean:64-69)
+      依赖定理: (基础定理)
+[L0] Cslib.Crypto.Protocols.PerfectSecrecy.encrypt_key_injective  (Cslib/Crypto/Protocols/PerfectSecrecy/Internal/PerfectSecrecy.lean:103-112)
+      依赖定理: (基础定理)
+[L0] Cslib.Crypto.Protocols.PerfectSecrecy.indep_of_ciphertextIndist  (Cslib/Crypto/Protocols/PerfectSecrecy/Internal/PerfectSecrecy.lean:67-77)
+      依赖定理: (基础定理)
+[L0] Cslib.Crypto.Protocols.PerfectSecrecy.perfectlySecret_iff_indep  (Cslib/Crypto/Protocols/PerfectSecrecy/Internal/PerfectSecrecy.lean:44-64)
+      依赖定理: Cslib.Crypto.Protocols.PerfectSecrecy.jointDist_tsum_fst
+[L0] Cslib.Crypto.Protocols.SecretSharing.Shamir.Polynomial.degree_sharingPolynomial_tailPolynomial_lt_succ  (Cslib/Crypto/Protocols/SecretSharing/Shamir/Polynomial.lean:99-104)
+      依赖定理: (基础定理)
+[L0] Cslib.Crypto.Protocols.SecretSharing.Shamir.authorized_univ  (Cslib/Crypto/Protocols/SecretSharing/Shamir.lean:94-97)
+      依赖定理: (基础定理)
+[L0] Cslib.Crypto.Protocols.SecretSharing.Shamir.reconstruct_view_eq_secret  (Cslib/Crypto/Protocols/SecretSharing/Shamir.lean:318-325)
+      依赖定理: (基础定理)
+[L0] Cslib.Crypto.Protocols.SecretSharing.Shamir.schemeWith_authorized_iff  (Cslib/Crypto/Protocols/SecretSharing/Shamir.lean:298-301)
+      依赖定理: (基础定理)
+[L0] Cslib.FLTS.toLTS_tr  (Cslib/Foundations/Semantics/FLTS/FLTSToLTS.lean:30-31)
+      依赖定理: (基础定理)
+[L0] Cslib.FinFun.congrFinFun  (Cslib/Foundations/Data/FinFun/Basic.lean:92-92)
+      依赖定理: (基础定理)
+[L0] Cslib.FinFun.eq_fields_eq  (Cslib/Foundations/Data/FinFun/Basic.lean:82-83)
+      依赖定理: (基础定理)
+[L0] Cslib.FinFun.fromFun_inter  (Cslib/Foundations/Data/FinFun/Basic.lean:124-126)
+      依赖定理: (基础定理)
+[L0] Cslib.FinFun.update_idem  (Cslib/Foundations/Data/FinFun/Update.lean:52-52)
+      依赖定理: (基础定理)
+[L0] Cslib.FreeM.FreeState.FreeWriter.FreeCont.FreeReader.run_withReader  (Cslib/Foundations/Control/Monad/Free/Effects.lean:458-464)
+      依赖定理: (基础定理)
+[L0] Cslib.FreeM.FreeState.FreeWriter.FreeCont.run_callCC  (Cslib/Foundations/Control/Monad/Free/Effects.lean:376-380)
+      依赖定理: Cslib.FreeM.FreeState.FreeWriter.FreeCont.run_liftBind_callCC
+[L0] Cslib.FreeM.FreeState.FreeWriter.listen_liftBind_tell  (Cslib/Foundations/Control/Monad/Free/Effects.lean:262-269)
+      依赖定理: (基础定理)
+[L0] Cslib.FreeM.FreeState.FreeWriter.listen_pure  (Cslib/Foundations/Control/Monad/Free/Effects.lean:258-260)
+      依赖定理: (基础定理)
+[L0] Cslib.FreeM.FreeState.FreeWriter.run_toWriterT  (Cslib/Foundations/Control/Monad/Free/Effects.lean:236-245)
+      依赖定理: Cslib.FreeM.FreeState.FreeWriter.FreeCont.FreeReader.run_pure
+[L0] Cslib.FreeM.FreeState.run_bind  (Cslib/Foundations/Control/Monad/Free/Effects.lean:123-130)
+      依赖定理: (基础定理)
+[L0] Cslib.FreeM.Interprets.liftM  (Cslib/Foundations/Control/Monad/Free.lean:277-280)
+      依赖定理: (基础定理)
+[L0] Cslib.FreeM.bind_pure  (Cslib/Foundations/Control/Monad/Free.lean:160-163)
+      依赖定理: (基础定理)
+[L0] Cslib.FreeM.liftM_lift  (Cslib/Foundations/Control/Monad/Free.lean:212-214)
+      依赖定理: (基础定理)
+[L0] Cslib.LTS.Bisimilarity.bisimilarity_neq_traceEq  (Cslib/Foundations/Semantics/LTS/Bisimulation.lean:712-721)
+      依赖定理: (基础定理)
+[L0] Cslib.LTS.Execution.nonEmpty_states  (Cslib/Foundations/Semantics/LTS/Execution.lean:30-31)
+      依赖定理: (基础定理)
+[L0] Cslib.LTS.Execution.refl  (Cslib/Foundations/Semantics/LTS/Execution.lean:35-36)
+      依赖定理: (基础定理)
+[L0] Cslib.LTS.Execution.to_mTr  (Cslib/Foundations/Semantics/LTS/Execution.lean:69-85)
+      依赖定理: (基础定理)
+[L0] Cslib.LTS.HomBisimilarity.refl  (Cslib/Foundations/Semantics/LTS/Bisimulation.lean:121-123)
+      依赖定理: (基础定理)
+[L0] Cslib.LTS.HomSimulationEquiv.eqv  (Cslib/Foundations/Semantics/LTS/Simulation.lean:150-153)
+      依赖定理: (基础定理)
+[L0] Cslib.LTS.IsBisimulation.follow_snd  (Cslib/Foundations/Semantics/LTS/Bisimulation.lean:95-98)
+      依赖定理: (基础定理)
+[L0] Cslib.LTS.IsBisimulation.isSimulation  (Cslib/Foundations/Semantics/LTS/Bisimulation.lean:771-772)
+      依赖定理: (基础定理)
+[L0] Cslib.LTS.IsBisimulation.sup  (Cslib/Foundations/Semantics/LTS/Bisimulation.lean:167-206)
+      依赖定理: (基础定理)
+[L0] Cslib.LTS.IsSWBisimulation.comp  (Cslib/Foundations/Semantics/LTS/Bisimulation.lean:994-999)
+      依赖定理: Cslib.LTS.IsSWBisimulation.comp
+[L0] Cslib.LTS.OmegaExecution.append  (Cslib/Foundations/Semantics/LTS/OmegaExecution.lean:51-66)
+      依赖定理: (基础定理)
+[L0] Cslib.LTS.deterministic_image_char  (Cslib/Foundations/Semantics/LTS/Basic.lean:251-252)
+      依赖定理: (基础定理)
+[L0] Cslib.LTS.isWeakBisimulation_iff_isSWBisimulation  (Cslib/Foundations/Semantics/LTS/Bisimulation.lean:884-941)
+      依赖定理: (基础定理)
+[L0] Cslib.LTS.mTr_iff_execution  (Cslib/Foundations/Semantics/LTS/Execution.lean:90-92)
+      依赖定理: (基础定理)
+[L0] Cslib.LTS.mem_pairLang  (Cslib/Computability/Automata/NA/Pair.lean:28-29)
+      依赖定理: (基础定理)
+[L0] Cslib.LTS.pairLang_append  (Cslib/Computability/Automata/NA/Pair.lean:58-61)
+      依赖定理: (基础定理)
+[L0] Cslib.LTS.pairViaLang_regular  (Cslib/Computability/Automata/NA/Pair.lean:53-56)
+      依赖定理: (基础定理)
+[L0] Cslib.LTS.saturate_τSTr_τSTr  (Cslib/Foundations/Semantics/LTS/HasTau.lean:67-80)
+      依赖定理: (基础定理)
+[L0] Cslib.LTS.setImageMultistep_setImage_head  (Cslib/Foundations/Semantics/LTS/Basic.lean:216-218)
+      依赖定理: (基础定理)
+[L0] Cslib.LTS.totalize.no_sink_to_nonsink  (Cslib/Foundations/Semantics/LTS/Total.lean:78-84)
+      依赖定理: (基础定理)
+[L0] Cslib.LTS.tr_setImage  (Cslib/Foundations/Semantics/LTS/Basic.lean:198-199)
+      依赖定理: (基础定理)
+[L0] Cslib.LambdaCalculus.LocallyNameless.Fsub.Env.Wf.to_ok  (Cslib/Languages/LambdaCalculus/LocallyNameless/Fsub/WellFormed.lean:57-60)
+      依赖定理: (基础定理)
+[L0] Cslib.LambdaCalculus.LocallyNameless.Fsub.Sub.narrow_aux  (Cslib/Languages/LambdaCalculus/LocallyNameless/Fsub/Subtype.lean:80-102)
+      依赖定理: Cslib.LambdaCalculus.LocallyNameless.Fsub.Sub.weaken, Cslib.LambdaCalculus.LocallyNameless.Fsub.Typing.wf
+[L0] Cslib.LambdaCalculus.LocallyNameless.Fsub.Term.Red.lc  (Cslib/Languages/LambdaCalculus/LocallyNameless/Fsub/Reduction.lean:104-114)
+      依赖定理: (基础定理)
+[L0] Cslib.LambdaCalculus.LocallyNameless.Fsub.Term.Value.lc  (Cslib/Languages/LambdaCalculus/LocallyNameless/Fsub/Reduction.lean:83-85)
+      依赖定理: (基础定理)
+[L0] Cslib.LambdaCalculus.LocallyNameless.Fsub.Term.open_tm_body  (Cslib/Languages/LambdaCalculus/LocallyNameless/Fsub/Reduction.lean:67-71)
+      依赖定理: (基础定理)
+[L0] Cslib.LambdaCalculus.LocallyNameless.Fsub.Ty.Term.Binding.substTy  (Cslib/Languages/LambdaCalculus/LocallyNameless/Fsub/Opening.lean:419-420)
+      依赖定理: (基础定理)
+[L0] Cslib.LambdaCalculus.LocallyNameless.Fsub.Ty.Term.openRecTm_substTy  (Cslib/Languages/LambdaCalculus/LocallyNameless/Fsub/Opening.lean:344-347)
+      依赖定理: (基础定理)
+[L0] Cslib.LambdaCalculus.LocallyNameless.Fsub.Ty.Term.openRecTm_ty_eq  (Cslib/Languages/LambdaCalculus/LocallyNameless/Fsub/Opening.lean:220-223)
+      依赖定理: (基础定理)
+[L0] Cslib.LambdaCalculus.LocallyNameless.Fsub.Ty.Term.openRecTy_lc  (Cslib/Languages/LambdaCalculus/LocallyNameless/Fsub/Opening.lean:225-231)
+      依赖定理: (基础定理)
+[L0] Cslib.LambdaCalculus.LocallyNameless.Fsub.Ty.Term.openRecTy_substTy  (Cslib/Languages/LambdaCalculus/LocallyNameless/Fsub/Opening.lean:259-262)
+      依赖定理: Cslib.LambdaCalculus.LocallyNameless.Fsub.Ty.openRec_subst
+[L0] Cslib.LambdaCalculus.LocallyNameless.Fsub.Ty.Term.openTm_substTy_var  (Cslib/Languages/LambdaCalculus/LocallyNameless/Fsub/Opening.lean:353-355)
+      依赖定理: (基础定理)
+[L0] Cslib.LambdaCalculus.LocallyNameless.Fsub.Ty.Term.openTy_substTm  (Cslib/Languages/LambdaCalculus/LocallyNameless/Fsub/Opening.lean:362-364)
+      依赖定理: (基础定理)
+[L0] Cslib.LambdaCalculus.LocallyNameless.Fsub.Ty.Term.openTy_substTy_var  (Cslib/Languages/LambdaCalculus/LocallyNameless/Fsub/Opening.lean:268-270)
+      依赖定理: (基础定理)
+[L0] Cslib.LambdaCalculus.LocallyNameless.Fsub.Ty.Term.substTm_def  (Cslib/Languages/LambdaCalculus/LocallyNameless/Fsub/Opening.lean:300-301)
+      依赖定理: (基础定理)
+[L0] Cslib.LambdaCalculus.LocallyNameless.Fsub.Ty.Wf.Env.Wf.map_subst_nmem  (Cslib/Languages/LambdaCalculus/LocallyNameless/Fsub/WellFormed.lean:186-189)
+      依赖定理: (基础定理)
+[L0] Cslib.LambdaCalculus.LocallyNameless.Fsub.Ty.Wf.Env.Wf.narrow  (Cslib/Languages/LambdaCalculus/LocallyNameless/Fsub/WellFormed.lean:166-170)
+      依赖定理: Cslib.LambdaCalculus.LocallyNameless.Fsub.Ty.Wf.Env.Wf.narrow
+[L0] Cslib.LambdaCalculus.LocallyNameless.Fsub.Ty.Wf.lc  (Cslib/Languages/LambdaCalculus/LocallyNameless/Fsub/WellFormed.lean:69-72)
+      依赖定理: (基础定理)
+[L0] Cslib.LambdaCalculus.LocallyNameless.Fsub.Ty.Wf.of_env_ty  (Cslib/Languages/LambdaCalculus/LocallyNameless/Fsub/WellFormed.lean:143-146)
+      依赖定理: (基础定理)
+[L0] Cslib.LambdaCalculus.LocallyNameless.Fsub.Ty.nmem_fv_open  (Cslib/Languages/LambdaCalculus/LocallyNameless/Fsub/Opening.lean:136-137)
+      依赖定理: (基础定理)
+[L0] Cslib.LambdaCalculus.LocallyNameless.Fsub.Ty.openRec_subst_intro  (Cslib/Languages/LambdaCalculus/LocallyNameless/Fsub/Opening.lean:116-119)
+      依赖定理: (基础定理)
+[L0] Cslib.LambdaCalculus.LocallyNameless.Fsub.Typing.inr_inv  (Cslib/Languages/LambdaCalculus/LocallyNameless/Fsub/Typing.lean:212-216)
+      依赖定理: (基础定理)
+[L0] Cslib.LambdaCalculus.LocallyNameless.Stlc.Typing.perm  (Cslib/Languages/LambdaCalculus/LocallyNameless/Stlc/Basic.lean:70-76)
+      依赖定理: (基础定理)
+[L0] Cslib.LambdaCalculus.LocallyNameless.Stlc.Typing.weaken_aux  (Cslib/Languages/LambdaCalculus/LocallyNameless/Stlc/Basic.lean:78-83)
+      依赖定理: (基础定理)
+[L0] Cslib.LambdaCalculus.LocallyNameless.Stlc.entailsContext_cons  (Cslib/Languages/LambdaCalculus/LocallyNameless/Stlc/StrongNorm.lean:86-94)
+      依赖定理: (基础定理)
+[L0] Cslib.LambdaCalculus.LocallyNameless.Untyped.Term.FullBeta.redex_app_l_cong  (Cslib/Languages/LambdaCalculus/LocallyNameless/Untyped/FullBeta.lean:58-59)
+      依赖定理: (基础定理)
+[L0] Cslib.LambdaCalculus.LocallyNameless.Untyped.Term.FullBeta.step_lc_l  (Cslib/Languages/LambdaCalculus/LocallyNameless/Untyped/FullBeta.lean:49-54)
+      依赖定理: (基础定理)
+[L0] Cslib.LambdaCalculus.LocallyNameless.Untyped.Term.FullBeta.steps_open_cong_l_abs  (Cslib/Languages/LambdaCalculus/LocallyNameless/Untyped/FullBeta.lean:150-159)
+      依赖定理: (基础定理)
+[L0] Cslib.LambdaCalculus.LocallyNameless.Untyped.Term.FullBeta.steps_subst_cong_r  (Cslib/Languages/LambdaCalculus/LocallyNameless/Untyped/FullBeta.lean:178-182)
+      依赖定理: (基础定理)
+[L0] Cslib.LambdaCalculus.LocallyNameless.Untyped.Term.FullBetaEta.redex_app_r_cong  (Cslib/Languages/LambdaCalculus/LocallyNameless/Untyped/FullBetaEta.lean:49-56)
+      依赖定理: (基础定理)
+[L0] Cslib.LambdaCalculus.LocallyNameless.Untyped.Term.FullEta.close_eta_steps  (Cslib/Languages/LambdaCalculus/LocallyNameless/Untyped/FullEta.lean:151-156)
+      依赖定理: (基础定理)
+[L0] Cslib.LambdaCalculus.LocallyNameless.Untyped.Term.FullEta.step_lc_l  (Cslib/Languages/LambdaCalculus/LocallyNameless/Untyped/FullEta.lean:47-53)
+      依赖定理: (基础定理)
+[L0] Cslib.LambdaCalculus.LocallyNameless.Untyped.Term.FullEta.steps_open_cong_r  (Cslib/Languages/LambdaCalculus/LocallyNameless/Untyped/FullEta.lean:143-147)
+      依赖定理: (基础定理)
+[L0] Cslib.LambdaCalculus.LocallyNameless.Untyped.Term.FullEta.steps_subst_cong_r  (Cslib/Languages/LambdaCalculus/LocallyNameless/Untyped/FullEta.lean:128-132)
+      依赖定理: (基础定理)
+[L0] Cslib.LambdaCalculus.LocallyNameless.Untyped.Term.close_rec_fv  (Cslib/Languages/LambdaCalculus/LocallyNameless/Untyped/Properties.lean:49-52)
+      依赖定理: (基础定理)
+[L0] Cslib.LambdaCalculus.LocallyNameless.Untyped.Term.close_var_not_fvar  (Cslib/Languages/LambdaCalculus/LocallyNameless/Untyped/Properties.lean:54-56)
+      依赖定理: (基础定理)
+[L0] Cslib.LambdaCalculus.LocallyNameless.Untyped.Term.confluence_beta  (Cslib/Languages/LambdaCalculus/LocallyNameless/Untyped/FullBetaConfluence.lean:205-210)
+      依赖定理: (基础定理)
+[L0] Cslib.LambdaCalculus.LocallyNameless.Untyped.Term.depth_open_fvar_eq_depth  (Cslib/Languages/LambdaCalculus/LocallyNameless/Untyped/LcAt.lean:62-63)
+      依赖定理: (基础定理)
+[L0] Cslib.LambdaCalculus.LocallyNameless.Untyped.Term.multiSubst_preserves_not_fvar  (Cslib/Languages/LambdaCalculus/LocallyNameless/Untyped/MultiSubst.lean:64-68)
+      依赖定理: (基础定理)
+[L0] Cslib.LambdaCalculus.LocallyNameless.Untyped.Term.neutral_step  (Cslib/Languages/LambdaCalculus/LocallyNameless/Untyped/StrongNorm.lean:87-89)
+      依赖定理: (基础定理)
+[L0] Cslib.LambdaCalculus.LocallyNameless.Untyped.Term.open_eq_app  (Cslib/Languages/LambdaCalculus/LocallyNameless/Untyped/Properties.lean:86-89)
+      依赖定理: Cslib.LambdaCalculus.LocallyNameless.Fsub.Ty.Wf.open_lc
+[L0] Cslib.LambdaCalculus.LocallyNameless.Untyped.Term.para_lc_r  (Cslib/Languages/LambdaCalculus/LocallyNameless/Untyped/FullBetaConfluence.lean:66-72)
+      依赖定理: (基础定理)
+[L0] Cslib.LambdaCalculus.LocallyNameless.Untyped.Term.para_open_close  (Cslib/Languages/LambdaCalculus/LocallyNameless/Untyped/FullBetaConfluence.lean:124-126)
+      依赖定理: (基础定理)
+[L0] Cslib.LambdaCalculus.LocallyNameless.Untyped.Term.sn_neutral  (Cslib/Languages/LambdaCalculus/LocallyNameless/Untyped/StrongNorm.lean:95-101)
+      依赖定理: (基础定理)
+[L0] Cslib.LambdaCalculus.LocallyNameless.Untyped.Term.subst_fvar  (Cslib/Languages/LambdaCalculus/LocallyNameless/Untyped/Basic.lean:130-130)
+      依赖定理: (基础定理)
+[L0] Cslib.LambdaCalculus.LocallyNameless.Untyped.Term.subst_open  (Cslib/Languages/LambdaCalculus/LocallyNameless/Untyped/Properties.lean:97-99)
+      依赖定理: (基础定理)
+[L0] Cslib.LambdaCalculus.LocallyNameless.Untyped.Term.subst_openRec  (Cslib/Languages/LambdaCalculus/LocallyNameless/Untyped/Properties.lean:91-95)
+      依赖定理: (基础定理)
+[L0] Cslib.LambdaCalculus.LocallyNameless.Untyped.Term.subst_open_var  (Cslib/Languages/LambdaCalculus/LocallyNameless/Untyped/Properties.lean:102-103)
+      依赖定理: (基础定理)
+[L0] Cslib.LambdaCalculus.LocallyNameless.Untyped.Term.swap_open_fvar_close  (Cslib/Languages/LambdaCalculus/LocallyNameless/Untyped/Properties.lean:44-47)
+      依赖定理: (基础定理)
+[L0] Cslib.Language.IsRegular.iff_nfa  (Cslib/Computability/Languages/RegularLanguage.lean:48-57)
+      依赖定理: (基础定理)
+[L0] Cslib.Language.IsRegular.inf  (Cslib/Computability/Languages/RegularLanguage.lean:104-112)
+      依赖定理: (基础定理)
+[L0] Cslib.Logic.CLL.PhaseSpace.Fact.linImpl_iff_implies  (Cslib/Logics/LinearLogic/CLL/PhaseSemantics/Basic.lean:506-518)
+      依赖定理: (基础定理)
+[L0] Cslib.Logic.CLL.PhaseSpace.Fact.linImpl_par  (Cslib/Logics/LinearLogic/CLL/PhaseSemantics/Basic.lean:497-498)
+      依赖定理: Cslib.Logic.CLL.PhaseSpace.Fact.par_of_tensor
+[L0] Cslib.Logic.CLL.PhaseSpace.Fact.mul_subset_tensor  (Cslib/Logics/LinearLogic/CLL/PhaseSemantics/Basic.lean:488-488)
+      依赖定理: (基础定理)
+[L0] Cslib.Logic.CLL.PhaseSpace.Fact.neg_surjective  (Cslib/Logics/LinearLogic/CLL/PhaseSemantics/Basic.lean:368-369)
+      依赖定理: (基础定理)
+[L0] Cslib.Logic.CLL.PhaseSpace.Fact.neg_with  (Cslib/Logics/LinearLogic/CLL/PhaseSemantics/Basic.lean:559-559)
+      依赖定理: (基础定理)
+[L0] Cslib.Logic.CLL.PhaseSpace.Fact.par_semi_distrib_plus  (Cslib/Logics/LinearLogic/CLL/PhaseSemantics/Basic.lean:631-634)
+      依赖定理: (基础定理)
+[L0] Cslib.Logic.CLL.PhaseSpace.Fact.plus_eq_with_dual  (Cslib/Logics/LinearLogic/CLL/PhaseSemantics/Basic.lean:550-553)
+      依赖定理: (基础定理)
+[L0] Cslib.Logic.CLL.PhaseSpace.Fact.plus_tensor_distrib  (Cslib/Logics/LinearLogic/CLL/PhaseSemantics/Basic.lean:604-605)
+      依赖定理: (基础定理)
+[L0] Cslib.Logic.CLL.PhaseSpace.Fact.with_top  (Cslib/Logics/LinearLogic/CLL/PhaseSemantics/Basic.lean:571-571)
+      依赖定理: (基础定理)
+[L0] Cslib.Logic.CLL.PhaseSpace.coe_mk  (Cslib/Logics/LinearLogic/CLL/PhaseSemantics/Basic.lean:193-193)
+      依赖定理: (基础定理)
+[L0] Cslib.Logic.CLL.PhaseSpace.coe_zero  (Cslib/Logics/LinearLogic/CLL/PhaseSemantics/Basic.lean:243-243)
+      依赖定理: (基础定理)
+[L0] Cslib.Logic.CLL.PhaseSpace.dual_dual_subset_Fact_iff  (Cslib/Logics/LinearLogic/CLL/PhaseSemantics/Basic.lean:210-211)
+      依赖定理: (基础定理)
+[L0] Cslib.Logic.CLL.PhaseSpace.iInter_eq_sInf_image  (Cslib/Logics/LinearLogic/CLL/PhaseSemantics/Basic.lean:312-313)
+      依赖定理: (基础定理)
+[L0] Cslib.Logic.CLL.PhaseSpace.inter_eq_orth_union_orth  (Cslib/Logics/LinearLogic/CLL/PhaseSemantics/Basic.lean:315-326)
+      依赖定理: Cslib.Logic.CLL.PhaseSpace.orthogonal_def
+[L0] Cslib.Logic.CLL.PhaseSpace.mem_carrier  (Cslib/Logics/LinearLogic/CLL/PhaseSemantics/Basic.lean:179-179)
+      依赖定理: (基础定理)
+[L0] Cslib.Logic.CLL.PhaseSpace.mem_one  (Cslib/Logics/LinearLogic/CLL/PhaseSemantics/Basic.lean:221-222)
+      依赖定理: (基础定理)
+[L0] Cslib.Logic.CLL.PhaseSpace.orth_iUnion  (Cslib/Logics/LinearLogic/CLL/PhaseSemantics/Basic.lean:117-131)
+      依赖定理: (基础定理)
+[L0] Cslib.Logic.CLL.PhaseSpace.triple_orth  (Cslib/Logics/LinearLogic/CLL/PhaseSemantics/Basic.lean:102-104)
+      依赖定理: (基础定理)
+[L0] Cslib.Logic.CLL.PhaseSpace.zero_least_fact  (Cslib/Logics/LinearLogic/CLL/PhaseSemantics/Basic.lean:269-274)
+      依赖定理: (基础定理)
+[L0] Cslib.Logic.CLL.Proof.expand_onlyAtomicAxioms  (Cslib/Logics/LinearLogic/CLL/EtaExpansion.lean:121-134)
+      依赖定理: (基础定理)
+[L0] Cslib.Logic.CLL.Proof.onlyAtomicAxioms_rwConclusion  (Cslib/Logics/LinearLogic/CLL/EtaExpansion.lean:99-101)
+      依赖定理: (基础定理)
+[L0] Cslib.Logic.CLL.Proposition.Equiv.symm  (Cslib/Logics/LinearLogic/CLL/Basic.lean:298-298)
+      依赖定理: (基础定理)
+[L0] Cslib.Logic.CLL.Proposition.Proposition.equiv_with₁  (Cslib/Logics/LinearLogic/CLL/Basic.lean:536-564)
+      依赖定理: (基础定理)
+[L0] Cslib.Logic.HML.bisimulation_satisfies  (Cslib/Logics/HML/Basic.lean:236-245)
+      依赖定理: (基础定理)
+[L0] Cslib.Logic.HML.propositions_complete  (Cslib/Logics/HML/Basic.lean:186-188)
+      依赖定理: (基础定理)
+[L0] Cslib.Logic.HML.satisfies_finiteOr  (Cslib/Logics/HML/Basic.lean:149-152)
+      依赖定理: (基础定理)
+[L0] Cslib.Logic.HML.theoryEq_eq_bisimilarity  (Cslib/Logics/HML/Basic.lean:255-264)
+      依赖定理: (基础定理)
+[L0] Cslib.Logic.InferenceSystem.DerivableIn.fromDerivation  (Cslib/Foundations/Logic/InferenceSystem.lean:51-52)
+      依赖定理: (基础定理)
+[L0] Cslib.Logic.Modal.Satisfies.b  (Cslib/Logics/Modal/Basic.lean:194-197)
+      依赖定理: (基础定理)
+[L0] Cslib.Logic.Modal.Satisfies.d  (Cslib/Logics/Modal/Basic.lean:244-247)
+      依赖定理: (基础定理)
+[L0] Cslib.Logic.Modal.Satisfies.t_box_diamond  (Cslib/Logics/Modal/Basic.lean:189-191)
+      依赖定理: (基础定理)
+[L0] Cslib.Logic.Modal.T.t_valid  (Cslib/Logics/Modal/Cube.lean:133-135)
+      依赖定理: (基础定理)
+[L0] Cslib.Logic.Modal.k_subset_four  (Cslib/Logics/Modal/Cube.lean:104-105)
+      依赖定理: (基础定理)
+[L0] Cslib.Logic.Modal.theoryEq_denotation_eq  (Cslib/Logics/Modal/Denotation.lean:46-49)
+      依赖定理: (基础定理)
+[L0] Cslib.Logic.Modal.theoryEq_satisfies  (Cslib/Logics/Modal/Basic.lean:159-162)
+      依赖定理: (基础定理)
+[L0] Cslib.Logic.PL.DerivableIn.weakTheory  (Cslib/Logics/Propositional/NaturalDeduction/Basic.lean:201-203)
+      依赖定理: (基础定理)
+[L0] Cslib.Logic.PL.Theory.Equiv.refl  (Cslib/Logics/Propositional/NaturalDeduction/Basic.lean:364-365)
+      依赖定理: (基础定理)
+[L0] Cslib.Logic.PL.Theory.equiv_iff_equiv_derivableIn  (Cslib/Logics/Propositional/NaturalDeduction/Basic.lean:338-347)
+      依赖定理: (基础定理)
+[L0] Cslib.Logic.PL.Theory.instIsClassicalExtention  (Cslib/Logics/Propositional/Defs.lean:143-144)
+      依赖定理: (基础定理)
+[L0] Cslib.Logic.PL.Theory.instIsIntuitionisticExtention  (Cslib/Logics/Propositional/Defs.lean:138-139)
+      依赖定理: (基础定理)
+[L0] Cslib.MachineLearning.PACLearning.IsPACLearnable.sampleComplexity_mono_family  (Cslib/MachineLearning/PACLearning/Defs.lean:441-445)
+      依赖定理: (基础定理)
+[L0] Cslib.MachineLearning.PACLearning.IsPACLearnable.toIsRPACLearnable  (Cslib/MachineLearning/PACLearning/Defs.lean:298-303)
+      依赖定理: (基础定理)
+[L0] Cslib.MachineLearning.PACLearning.IsPACLearnerFor.mono_δ  (Cslib/MachineLearning/PACLearning/Defs.lean:217-224)
+      依赖定理: (基础定理)
+[L0] Cslib.MachineLearning.PACLearning.IsRPACLearnable.rsampleComplexity_mono_family  (Cslib/MachineLearning/PACLearning/Defs.lean:463-467)
+      依赖定理: (基础定理)
+[L0] Cslib.MachineLearning.PACLearning.rsampleComplexity_mono_family  (Cslib/MachineLearning/PACLearning/Defs.lean:412-416)
+      依赖定理: (基础定理)
+[L0] Cslib.MachineLearning.PACLearning.sampleComplexity_antitone_δ  (Cslib/MachineLearning/PACLearning/Defs.lean:374-378)
+      依赖定理: (基础定理)
+[L0] Cslib.MachineLearning.PACLearning.sampleComplexity_mono_C  (Cslib/MachineLearning/PACLearning/Defs.lean:398-402)
+      依赖定理: (基础定理)
+[L0] Cslib.Probability.PMF.posteriorDist_eq_prior_of_outputIndist  (Cslib/Probability/PMF.lean:116-131)
+      依赖定理: (基础定理)
+[L0] Cslib.SKI.Church_succ  (Cslib/Languages/CombinatoryLogic/Recursion.lean:75-75)
+      依赖定理: (基础定理)
+[L0] Cslib.SKI.FF_correct  (Cslib/Languages/CombinatoryLogic/Basic.lean:276-279)
+      依赖定理: (基础定理)
+[L0] Cslib.SKI.List.headD_def  (Cslib/Languages/CombinatoryLogic/List.lean:134-135)
+      依赖定理: (基础定理)
+[L0] Cslib.SKI.List.nil_def  (Cslib/Languages/CombinatoryLogic/List.lean:73-74)
+      依赖定理: (基础定理)
+[L0] Cslib.SKI.Polynomial.elimVar_correct  (Cslib/Languages/CombinatoryLogic/Basic.lean:91-118)
+      依赖定理: (基础定理)
+[L0] Cslib.SKI.church_red  (Cslib/Languages/CombinatoryLogic/Recursion.lean:77-82)
+      依赖定理: (基础定理)
+[L0] Cslib.SKI.confluent_redexFree  (Cslib/Languages/CombinatoryLogic/Evaluation.lean:185-188)
+      依赖定理: (基础定理)
+[L0] Cslib.SKI.evalStep_right_correct  (Cslib/Languages/CombinatoryLogic/Evaluation.lean:90-132)
+      依赖定理: (基础定理)
+[L0] Cslib.SKI.fixedPoint_correct  (Cslib/Languages/CombinatoryLogic/Basic.lean:239-239)
+      依赖定理: (基础定理)
+[L0] Cslib.SKI.isBool_injective  (Cslib/Languages/CombinatoryLogic/Evaluation.lean:212-223)
+      依赖定理: (基础定理)
+[L0] Cslib.SKI.isBool_trans  (Cslib/Languages/CombinatoryLogic/Basic.lean:259-266)
+      依赖定理: (基础定理)
+[L0] Cslib.SKI.isChurchList_trans  (Cslib/Languages/CombinatoryLogic/List.lean:36-45)
+      依赖定理: (基础定理)
+[L0] Cslib.SKI.mul_correct  (Cslib/Languages/CombinatoryLogic/Recursion.lean:371-380)
+      依赖定理: Cslib.SKI.zero_correct
+[L0] Cslib.SKI.parallelReduction_diamond  (Cslib/Languages/CombinatoryLogic/Confluence.lean:142-205)
+      依赖定理: (基础定理)
+[L0] Cslib.SKI.rec_def  (Cslib/Languages/CombinatoryLogic/Recursion.lean:255-260)
+      依赖定理: (基础定理)
+[L0] Cslib.SKI.rfindAboveAux_step  (Cslib/Languages/CombinatoryLogic/Recursion.lean:299-304)
+      依赖定理: (基础定理)
+[L0] Cslib.SKI.toChurch_correct  (Cslib/Languages/CombinatoryLogic/Recursion.lean:141-144)
+      依赖定理: Cslib.SKI.zero_correct
+[L0] Cslib.SKI.unpaired_correct  (Cslib/Languages/CombinatoryLogic/Basic.lean:366-372)
+      依赖定理: (基础定理)
+[L0] Cslib.URM.Program.Halts.of_toStandardForm  (Cslib/Computability/URM/StandardForm.lean:189-193)
+      依赖定理: (基础定理)
+[L0] Cslib.URM.Program.toStandardForm_idempotent  (Cslib/Computability/URM/StandardForm.lean:67-72)
+      依赖定理: (基础定理)
+[L0] Cslib.URM.Regs.State.Instr.JumpsBoundedBy.capJump  (Cslib/Computability/URM/Basic.lean:157-161)
+      依赖定理: (基础定理)
+[L0] Cslib.URM.Regs.State.Instr.T_nonJump  (Cslib/Computability/URM/Basic.lean:88-88)
+      依赖定理: (基础定理)
+[L0] Cslib.URM.Regs.State.Instr.capJump_S  (Cslib/Computability/URM/Basic.lean:147-147)
+      依赖定理: (基础定理)
+[L0] Cslib.URM.Step.Steps.HaltsWithResult.Halts.toHaltsWithResult  (Cslib/Computability/URM/Execution.lean:221-225)
+      依赖定理: (基础定理)
+[L0] Cslib.URM.Step.preserves_register  (Cslib/Computability/URM/Execution.lean:96-105)
+      依赖定理: Cslib.Language.IsRegular.zero
+[L0] Cslib.goodSelection_exists  (Cslib/Foundations/Combinatorics/InfiniteGraphRamsey.lean:65-76)
+      依赖定理: Cslib.infinite_pigeonhole_principle, Cslib.ωSequence.Step.mk
+[L0] Cslib.good_selections_exist  (Cslib/Foundations/Combinatorics/InfiniteGraphRamsey.lean:106-120)
+      依赖定理: (基础定理)
+[L0] Cslib.ωLanguage.IsRegular.not_da_buchi  (Cslib/Computability/Languages/OmegaRegularLanguage.lean:61-69)
+      依赖定理: (基础定理)
+[L0] Cslib.ωLanguage.IsRegular.top  (Cslib/Computability/Languages/OmegaRegularLanguage.lean:93-104)
+      依赖定理: (基础定理)
+[L0] Cslib.ωLanguage.append_mem_hmul  (Cslib/Computability/Languages/OmegaLanguage.lean:247-248)
+      依赖定理: (基础定理)
+[L0] Cslib.ωLanguage.hmul_omegaPow_le_omegaPow  (Cslib/Computability/Languages/OmegaLanguage.lean:413-418)
+      依赖定理: Cslib.ωLanguage.omegaPow_coind
+[L0] Cslib.ωLanguage.omegaPow_le_kstar_omegaPow  (Cslib/Computability/Languages/OmegaLanguage.lean:426-427)
+      依赖定理: (基础定理)
+[L0] Cslib.ωLanguage.omegaPow_of_le_one  (Cslib/Computability/Languages/OmegaLanguage.lean:331-332)
+      依赖定理: (基础定理)
+[L0] Cslib.ωLanguage.sup_def  (Cslib/Computability/Languages/OmegaLanguage.lean:115-115)
+      依赖定理: (基础定理)
+[L0] Cslib.ωLanguage.toSet_ofSet  (Cslib/Computability/Languages/OmegaLanguage.lean:91-91)
+      依赖定理: (基础定理)
+[L0] Cslib.ωLanguage.zero_hmul  (Cslib/Computability/Languages/OmegaLanguage.lean:269-271)
+      依赖定理: (基础定理)
+[L0] Cslib.ωSequence.append_extract_extract  (Cslib/Foundations/Data/OmegaSequence/Init.lean:484-487)
+      依赖定理: (基础定理)
+[L0] Cslib.ωSequence.append_right_inj  (Cslib/Foundations/Data/OmegaSequence/Init.lean:281-283)
+      依赖定理: (基础定理)
+[L0] Cslib.ωSequence.append_take_drop  (Cslib/Foundations/Data/OmegaSequence/Init.lean:364-367)
+      依赖定理: (基础定理)
+[L0] Cslib.ωSequence.concat_take_get  (Cslib/Foundations/Data/OmegaSequence/Init.lean:344-345)
+      依赖定理: (基础定理)
+[L0] Cslib.ωSequence.const_eq  (Cslib/Foundations/Data/OmegaSequence/Init.lean:183-185)
+      依赖定理: (基础定理)
+[L0] Cslib.ωSequence.cumLen_segment_one_add  (Cslib/Foundations/Data/OmegaSequence/Flatten.lean:66-97)
+      依赖定理: (基础定理)
+[L0] Cslib.ωSequence.cumLen_strictMono  (Cslib/Foundations/Data/OmegaSequence/Flatten.lean:55-57)
+      依赖定理: (基础定理)
+[L0] Cslib.ωSequence.drop_append_of_ge_length  (Cslib/Foundations/Data/OmegaSequence/Init.lean:408-411)
+      依赖定理: Cslib.ωSequence.get_append_right'
+[L0] Cslib.ωSequence.drop_append_ωSequence  (Cslib/Foundations/Data/OmegaSequence/Init.lean:302-305)
+      依赖定理: Turing.StackTape.tail_cons
+[L0] Cslib.ωSequence.drop_map  (Cslib/Foundations/Data/OmegaSequence/Init.lean:123-124)
+      依赖定理: (基础定理)
+[L0] Cslib.ωSequence.get_succ  (Cslib/Foundations/Data/OmegaSequence/Init.lean:87-88)
+      依赖定理: (基础定理)
+[L0] Cslib.ωSequence.get_tail  (Cslib/Foundations/Data/OmegaSequence/Init.lean:76-76)
+      依赖定理: (基础定理)
+[L0] Cslib.ωSequence.get_zero_cons  (Cslib/Foundations/Data/OmegaSequence/Init.lean:52-53)
+      依赖定理: (基础定理)
+[L0] Cslib.ωSequence.head_map  (Cslib/Foundations/Data/OmegaSequence/Init.lean:133-134)
+      依赖定理: (基础定理)
+[L0] Cslib.ωSequence.map_const  (Cslib/Foundations/Data/OmegaSequence/Init.lean:193-194)
+      依赖定理: (基础定理)
+[L0] Cslib.ωSequence.tail_map  (Cslib/Foundations/Data/OmegaSequence/Init.lean:130-130)
+      依赖定理: (基础定理)
+[L0] Cslib.ωSequence.take_drop  (Cslib/Foundations/Data/OmegaSequence/Init.lean:396-397)
+      依赖定理: (基础定理)
+[L0] Cslib.ωSequence.take_theorem  (Cslib/Foundations/Data/OmegaSequence/Init.lean:415-422)
+      依赖定理: (基础定理)
+[L0] Cslib.ωSequence.zip_eq  (Cslib/Foundations/Data/OmegaSequence/Init.lean:177-179)
+      依赖定理: (基础定理)
+[L0] Language.mem_biInf  (Cslib/Computability/Languages/Language.lean:29-31)
+      依赖定理: (基础定理)
+[L0] Language.mul_sub_one  (Cslib/Computability/Languages/Language.lean:71-76)
+      依赖定理: (基础定理)
+[L0] Nat.count_notMem_range_pos  (Cslib/Foundations/Data/Nat/Segment.lean:73-76)
+      依赖定理: (基础定理)
+[L0] Nat.infinite_strictMono  (Cslib/Foundations/Data/Nat/Segment.lean:42-44)
+      依赖定理: (基础定理)
+[L0] Nat.nth_succ_gap  (Cslib/Foundations/Data/Nat/Segment.lean:48-56)
+      依赖定理: (基础定理)
+[L0] Nat.segment_upper_bound'  (Cslib/Foundations/Data/Nat/Segment.lean:242-246)
+      依赖定理: Nat.base_zero_strictMono
+[L0] Relation.ReflTransGen.to_eqvGen  (Cslib/Foundations/Data/Relation.lean:48-49)
+      依赖定理: (基础定理)
+[L0] Relation.RelatesInSteps.head  (Cslib/Foundations/Data/RelatesInSteps.lean:50-56)
+      依赖定理: Cslib.LTS.STr.single
+[L0] Relation.RelatesInSteps.head_induction_on  (Cslib/Foundations/Data/RelatesInSteps.lean:59-69)
+      依赖定理: (基础定理)
+[L0] Relation.RelatesInSteps.succ'  (Cslib/Foundations/Data/RelatesInSteps.lean:103-114)
+      依赖定理: Relation.RelatesWithinSteps.zero_iff
+[L0] Relation.RelatesWithinSteps.of_le  (Cslib/Foundations/Data/RelatesInSteps.lean:194-198)
+      依赖定理: (基础定理)
+[L0] Relation.RelatesWithinSteps.trans  (Cslib/Foundations/Data/RelatesInSteps.lean:182-192)
+      依赖定理: Relation.RelatesWithinSteps.trans
+[L0] Relation.RightEuclidean.LeftEuclidean.Confluent.equivalence_join_reflTransGen  (Cslib/Foundations/Data/Relation.lean:312-315)
+      依赖定理: (基础定理)
+[L0] Relation.RightEuclidean.LeftEuclidean.Convergent.isConfluent  (Cslib/Foundations/Data/Relation.lean:431-431)
+      依赖定理: (基础定理)
+[L0] Relation.RightEuclidean.LeftEuclidean.Diamond.toConfluent  (Cslib/Foundations/Data/Relation.lean:201-208)
+      依赖定理: (基础定理)
+[L0] Relation.RightEuclidean.LeftEuclidean.ReflGen.compRel_symm  (Cslib/Foundations/Data/Relation.lean:565-568)
+      依赖定理: (基础定理)
+[L0] Relation.RightEuclidean.LeftEuclidean.RightEuclidean.symm_leftEuclidean  (Cslib/Foundations/Data/Relation.lean:144-145)
+      依赖定理: (基础定理)
+[L0] Relation.RightEuclidean.LeftEuclidean.SN.of_rel  (Cslib/Foundations/Data/Relation.lean:325-325)
+      依赖定理: (基础定理)
+[L0] Relation.RightEuclidean.LeftEuclidean.StronglyCommute.extend  (Cslib/Foundations/Data/Relation.lean:494-502)
+      依赖定理: (基础定理)
+[L0] Relation.RightEuclidean.LeftEuclidean.StronglyCommute.toStronglyConfluent  (Cslib/Foundations/Data/Relation.lean:486-486)
+      依赖定理: (基础定理)
+[L0] Relation.RightEuclidean.LeftEuclidean.Terminating.isConfluent_iff_all_unique_Normal  (Cslib/Foundations/Data/Relation.lean:403-424)
+      依赖定理: (基础定理)
+[L0] Relation.RightEuclidean.LeftEuclidean.Terminating.isNormalizing  (Cslib/Foundations/Data/Relation.lean:400-401)
+      依赖定理: (基础定理)
+[L0] Relation.RightEuclidean.LeftEuclidean.antisymm_leftUnique  (Cslib/Foundations/Data/Relation.lean:131-133)
+      依赖定理: (基础定理)
+[L0] Relation.RightEuclidean.LeftEuclidean.join_inl  (Cslib/Foundations/Data/Relation.lean:519-520)
+      依赖定理: (基础定理)
+[L0] Relation.RightEuclidean.LeftEuclidean.symm_rightEuclidean_iff_trans  (Cslib/Foundations/Data/Relation.lean:170-171)
+      依赖定理: (基础定理)
+[L0] Relation.RightEuclidean.antisymm_rightUnique  (Cslib/Foundations/Data/Relation.lean:101-103)
+      依赖定理: (基础定理)
+[L0] Relation.SymmGen.to_eqvGen  (Cslib/Foundations/Data/Relation.lean:51-52)
+      依赖定理: (基础定理)
+[L0] Set.saturates_compl  (Cslib/Foundations/Data/Set/Saturation.lean:32-35)
+      依赖定理: (基础定理)
+[L0] Turing.BiTape.moveLeft_moveRight  (Cslib/Foundations/Data/BiTape.lean:109-111)
+      依赖定理: (基础定理)
+[L0] Turing.BiTape.spaceUsed_mk₁  (Cslib/Foundations/Data/BiTape.lean:135-139)
+      依赖定理: (基础定理)
+[L0] Turing.SingleTapeTM.SingleTapeTM.Cfg.spaceUsed_haltCfg  (Cslib/Computability/Machines/SingleTapeTuring/Basic.lean:169-171)
+      依赖定理: (基础定理)
+[L0] Turing.SingleTapeTM.SingleTapeTM.Cfg.spaceUsed_initCfg  (Cslib/Computability/Machines/SingleTapeTuring/Basic.lean:165-167)
+      依赖定理: (基础定理)
+[L0] Turing.SingleTapeTM.SingleTapeTM.map_toCompCfg_left_step  (Cslib/Computability/Machines/SingleTapeTuring/Basic.lean:300-311)
+      依赖定理: Cslib.ωSequence.Step.mk
+[L0] Turing.StackTape.cons_some_toList  (Cslib/Foundations/Data/StackTape.lean:91-93)
+      依赖定理: (基础定理)
+[L0] Turing.StackTape.head_cons  (Cslib/Foundations/Data/StackTape.lean:118-124)
+      依赖定理: Cslib.ωSequence.Step.mk
+[L0] Turing.StackTape.length_nil  (Cslib/Foundations/Data/StackTape.lean:174-175)
+      依赖定理: (基础定理)
+[L1] Cslib.Automata.NA.Buchi.inter_freq_comp_acc_freq_acc  (Cslib/Computability/Automata/NA/BuchiInter.lean:79-94)
+      依赖定理: (基础定理)
+[L1] Cslib.Automata.NA.loop_fin_run_mtr  (Cslib/Computability/Automata/NA/Loop.lean:115-120)
+      依赖定理: (基础定理)
+[L1] Cslib.Automata.NA.loop_run_left_right  (Cslib/Computability/Automata/NA/Loop.lean:47-61)
+      依赖定理: (基础定理)
+[L1] Cslib.LTS.noε_saturate_mTr  (Cslib/Computability/Automata/EpsilonNA/ToNA.lean:29-33)
+      依赖定理: (基础定理)
+[L1] Cslib.Crypto.Protocols.PerfectSecrecy.jointDist_tsum_fst  (Cslib/Crypto/Protocols/PerfectSecrecy/Internal/PerfectSecrecy.lean:38-40)
+      依赖定理: (基础定理)
+[L1] Cslib.FreeM.FreeState.FreeWriter.FreeCont.run_liftBind_callCC  (Cslib/Foundations/Control/Monad/Free/Effects.lean:357-360)
+      依赖定理: (基础定理)
+[L1] Cslib.FreeM.FreeState.FreeWriter.FreeCont.FreeReader.run_pure  (Cslib/Foundations/Control/Monad/Free/Effects.lean:434-436)
+      依赖定理: (基础定理)
+[L1] Cslib.LambdaCalculus.LocallyNameless.Fsub.Sub.weaken  (Cslib/Languages/LambdaCalculus/LocallyNameless/Fsub/Subtype.lean:67-74)
+      依赖定理: (基础定理)
+[L1] Cslib.LambdaCalculus.LocallyNameless.Fsub.Typing.wf  (Cslib/Languages/LambdaCalculus/LocallyNameless/Fsub/Typing.lean:65-77)
+      依赖定理: (基础定理)
+[L1] Cslib.LambdaCalculus.LocallyNameless.Fsub.Ty.openRec_subst  (Cslib/Languages/LambdaCalculus/LocallyNameless/Fsub/Opening.lean:102-105)
+      依赖定理: (基础定理)
+[L1] Cslib.LambdaCalculus.LocallyNameless.Fsub.Ty.Wf.open_lc  (Cslib/Languages/LambdaCalculus/LocallyNameless/Fsub/WellFormed.lean:132-137)
+      依赖定理: Cslib.LambdaCalculus.LocallyNameless.Fsub.Sub.map_subst
+[L1] Cslib.Logic.CLL.PhaseSpace.Fact.par_of_tensor  (Cslib/Logics/LinearLogic/CLL/PhaseSemantics/Basic.lean:451-452)
+      依赖定理: (基础定理)
+[L1] Cslib.Logic.CLL.PhaseSpace.orthogonal_def  (Cslib/Logics/LinearLogic/CLL/PhaseSemantics/Basic.lean:94-94)
+      依赖定理: (基础定理)
+[L1] Cslib.SKI.zero_correct  (Cslib/Languages/CombinatoryLogic/Recursion.lean:103-108)
+      依赖定理: (基础定理)
+[L1] Cslib.infinite_pigeonhole_principle  (Cslib/Foundations/Combinatorics/InfiniteGraphRamsey.lean:29-38)
+      依赖定理: (基础定理)
+[L1] Cslib.ωLanguage.omegaPow_coind  (Cslib/Computability/Languages/OmegaLanguage.lean:393-396)
+      依赖定理: (基础定理)
+[L1] Cslib.ωSequence.get_append_right'  (Cslib/Foundations/Data/OmegaSequence/Init.lean:270-273)
+      依赖定理: (基础定理)
+[L1] Turing.StackTape.tail_cons  (Cslib/Foundations/Data/StackTape.lean:126-133)
+      依赖定理: Cslib.ωSequence.Step.mk
+[L1] Nat.base_zero_strictMono  (Cslib/Foundations/Data/Nat/Segment.lean:202-208)
+      依赖定理: (基础定理)
+[L1] Cslib.LTS.STr.single  (Cslib/Foundations/Semantics/LTS/HasTau.lean:47-50)
+      依赖定理: (基础定理)
+[L1] Relation.RelatesWithinSteps.zero_iff  (Cslib/Foundations/Data/RelatesInSteps.lean:174-180)
+      依赖定理: Cslib.Language.IsRegular.zero
+[L2] Cslib.LambdaCalculus.LocallyNameless.Fsub.Sub.map_subst  (Cslib/Languages/LambdaCalculus/LocallyNameless/Fsub/Subtype.lean:145-160)
+      依赖定理: Cslib.LambdaCalculus.LocallyNameless.Fsub.Ty.Wf.weaken_head
+[L2] Cslib.ωSequence.Step.mk  (Cslib/Foundations/Data/OmegaSequence/Temporal.lean:30-31)
+      依赖定理: (基础定理)
+[L2] Cslib.Language.IsRegular.zero  (Cslib/Computability/Languages/RegularLanguage.lean:72-80)
+      依赖定理: (基础定理)
+[L3] Cslib.LambdaCalculus.LocallyNameless.Fsub.Ty.Wf.weaken_head  (Cslib/Languages/LambdaCalculus/LocallyNameless/Fsub/WellFormed.lean:88-90)
+      依赖定理: Cslib.LambdaCalculus.LocallyNameless.Fsub.Ty.Wf.weaken
+[L4] Cslib.LambdaCalculus.LocallyNameless.Fsub.Ty.Wf.weaken  (Cslib/Languages/LambdaCalculus/LocallyNameless/Fsub/WellFormed.lean:81-85)
+      依赖定理: (基础定理)
+
+----------------------------------------------------------------------
+二、逐定理明细
+----------------------------------------------------------------------
+theorem Cslib.Algorithms.Lean.TimeM.clog2_floor_half_le
+  陈述: @[grind →]
+lemma clog2_floor_half_le (n : ℕ) (h : n > 1) : clog 2 (n / 2) ≤ clog 2 n - 1 :=
+  位置: Cslib/Algorithms/Lean/MergeSort/MergeSort.lean L134-139
+  依赖定理: (无)
+  外部premise(1):
+    - Cslib.Algorithms.Lean.TimeM.clog2_half_le   (via: apply Nat.le_trans _ (clog2_half_le n h))
+  被依赖: (无)
+
+theorem Cslib.Algorithms.Lean.TimeM.mem_either_merge
+  陈述: theorem mem_either_merge (xs ys : List α) (z : α) (hz : z ∈ ⟪merge xs ys⟫) : z ∈ xs ∨ z ∈ ys :=
+  位置: Cslib/Algorithms/Lean/MergeSort/MergeSort.lean L78-79
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.Algorithms.Lean.TimeM.mergeSort_correct
+  陈述: 
+  位置: Cslib/Algorithms/Lean/MergeSort/MergeSort.lean L110-111
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.Algorithms.Lean.TimeM.mergeSort_sorted
+  陈述: theorem mergeSort_sorted (xs : List α) : IsSorted ⟪mergeSort xs⟫ :=
+  位置: Cslib/Algorithms/Lean/MergeSort/MergeSort.lean L89-93
+  依赖定理: (无)
+  外部premise(2):
+    - Cslib.Algorithms.Lean.TimeM.mergeSort   (via: fun_induction mergeSort xs with
+| case1 )
+    - Cslib.Algorithms.Lean.TimeM.sorted_merge   (via: exact sorted_merge ih2 ih1; fun_induction mergeSort xs with
+| case1 )
+  被依赖: (无)
+
+theorem Cslib.Algorithms.Lean.TimeM.ret_bind
+  陈述: 
+  位置: Cslib/Algorithms/Lean/TimeM.lean L97-98
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.Algorithms.Lean.TimeM.ret_seqLeft
+  陈述: 
+  位置: Cslib/Algorithms/Lean/TimeM.lean L102-103
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.Algorithms.Lean.TimeM.time_seq
+  陈述: 
+  位置: Cslib/Algorithms/Lean/TimeM.lean L115-116
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.Automata.Acceptor.mem_language
+  陈述: 
+  位置: Cslib/Computability/Automata/Acceptors/Acceptor.lean L34-35
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.Automata.DA.buchi_eq_finAcc_omegaLim
+  陈述: theorem buchi_eq_finAcc_omegaLim {da : DA State Symbol} {acc : Set State} :
+    language (Buchi.mk d
+  位置: Cslib/Computability/Automata/DA/Buchi.lean L26-29
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.Automata.DA.run_succ
+  陈述: theorem run_succ {da : DA State Symbol} {xs : ωSequence Symbol} {n : ℕ} :
+    da.run xs (n + 1) = da
+  位置: Cslib/Computability/Automata/DA/Basic.lean L61-63
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.Automata.DA.run_zero
+  陈述: 
+  位置: Cslib/Computability/Automata/DA/Basic.lean L56-58
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.Automata.NA.Buchi.buchiCongruence_fin_index
+  陈述: 
+  位置: Cslib/Computability/Languages/Congruences/BuchiCongruence.lean L74-75
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.Automata.NA.Buchi.buchiFamily_saturation
+  陈述: theorem buchiFamily_saturation [Inhabited Symbol] :
+    Saturates (fun i ↦ (na.buchiFamily i).toSet)
+  位置: Cslib/Computability/Languages/Congruences/BuchiCongruence.lean L179-227
+  依赖定理: (无)
+  外部premise(2):
+    - Cslib.Automata.NA.Buchi.buchiCongruence_transfer   (via: grind [buchiCongruence_transfer h_xl_c h; have h_yl_e : yl ∈ na.pairLang (ss 0) (t; have h_yls (k : ℕ) := buchiCongruence_tr; suffices ∃ᶠ (k : ℕ) in atTop, ss1 k ∈ na)
+    - _private.Cslib.Computability.Languages.Congruences.BuchiCongruence.0.Cslib.Automata.NA.Buchi.frequently_via_accept   (via: obtain ⟨m, _, s, _, h_mem⟩ :=
+  frequent)
+  被依赖: (无)
+
+theorem Cslib.Automata.NA.Buchi.inter_language_eq
+  陈述: theorem inter_language_eq :
+    language (Buchi.mk (interNA na acc) (interAccept acc)) =
+    ⨅ i, la
+  位置: Cslib/Computability/Automata/NA/BuchiInter.lean L99-133
+  依赖定理(1): Cslib.Automata.NA.Buchi.inter_freq_comp_acc_freq_acc
+  外部premise(2):
+    - Cslib.Automata.NA.Buchi.interAccept   (via: simp only [interAccept, mem_union, frequ)
+    - Cslib.Automata.NA.Buchi.inter_freq_acc_freq_acc   (via: apply Frequently.mono <| inter_freq_acc_)
+  被依赖: (无)
+
+theorem Cslib.Automata.NA.Buchi.reindex_language_eq
+  陈述: theorem reindex_language_eq {f : State ≃ State'} {nba : Buchi State Symbol} :
+    language (nba.rein
+  位置: Cslib/Computability/Automata/NA/BuchiEquiv.lean L56-68
+  依赖定理: (无)
+  外部premise(1):
+    - Cslib.Automata.NA.Buchi.reindex_run_iff'   (via: constructor <;> grind [reindex_run_iff'])
+  被依赖: (无)
+
+theorem Cslib.Automata.NA.FinAcc.toDAFinAcc_language_eq
+  陈述: theorem toDAFinAcc_language_eq {na : NA.FinAcc State Symbol} :
+  language na.toDAFinAcc = language n
+  位置: Cslib/Computability/Automata/NA/ToDA.lean L42-47
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.Automata.NA.concat_run_right
+  陈述: lemma concat_run_right {xs : ωSequence Symbol} {ss : ωSequence (State1 ⊕ State2)}
+    (hc : (concat 
+  位置: Cslib/Computability/Automata/NA/Concat.lean L63-76
+  依赖定理: (无)
+  外部premise(1):
+    - Cslib.Automata.NA.concat   (via: case succ k h_ind => grind [concat, hc.t; grind [concat, hc.start]; grind [concat, hc.trans (n + k)]; grind [concat, hc.trans (n - 1)]; have h2 k : ∃ s2, ss (n + k) = inr s2 :=)
+  被依赖: (无)
+
+theorem Cslib.Automata.NA.loop_run_exists
+  陈述: theorem loop_run_exists [Inhabited Symbol] {xls : ωSequence (List Symbol)}
+    (h : ∀ k, (xls k) ∈ l
+  位置: Cslib/Computability/Automata/NA/Loop.lean L125-133
+  依赖定理(1): Cslib.Automata.NA.loop_fin_run_mtr
+  外部premise(1):
+    - Cslib.Automata.NA.FinAcc.loop   (via: grind [Run.mk, FinAcc.loop, cumLen_zero )
+  被依赖: (无)
+
+theorem Cslib.Automata.NA.loop_run_left_right_left
+  陈述: lemma loop_run_left_right_left {xs : ωSequence Symbol} {ss : ωSequence (Unit ⊕ State)}
+    (h : na.l
+  位置: Cslib/Computability/Automata/NA/Loop.lean L63-71
+  依赖定理(1): Cslib.Automata.NA.loop_run_left_right
+  外部premise(2):
+    - Cslib.Automata.NA.FinAcc.loop   (via: grind [FinAcc.loop, h.trans (n - 1)]; obtain ⟨t', h_tr, _⟩ : ∃ t', na.Tr t (xs)
+    - Cslib.Automata.NA.loop_run_left_left   (via: grind [loop_run_left_left])
+  被依赖: (无)
+
+theorem Cslib.Automata.NA.totalize_run_mtr
+  陈述: theorem totalize_run_mtr {xs : ωSequence Symbol} {ss : ωSequence (Option State)} {n : ℕ}
+    (h : na
+  位置: Cslib/Computability/Automata/NA/Total.lean L33-42
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.Automata.εNA.FinAcc.toNAFinAcc_language_eq
+  陈述: theorem toNAFinAcc_language_eq {ena : εNA.FinAcc State Symbol} :
+    language ena.toNAFinAcc = langu
+  位置: Cslib/Computability/Automata/EpsilonNA/ToNA.lean L50-57
+  依赖定理(1): Cslib.LTS.noε_saturate_mTr
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.Automata.ωAcceptor.mem_language
+  陈述: 
+  位置: Cslib/Computability/Automata/Acceptors/OmegaAcceptor.lean L33-34
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.CCS.Act.context_fill_def
+  陈述: 
+  位置: Cslib/Languages/CCS/Basic.lean L126-127
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.CCS.Act.isCo_iff
+  陈述: theorem isCo_iff [DecidableEq Name] {μ μ' : Act Name} : isCo μ μ' ↔ Co μ μ' :=
+  位置: Cslib/Languages/CCS/Basic.lean L89-90
+  依赖定理: (无)
+  外部premise(1):
+    - Cslib.CCS.Act   (via: grind [cases Act])
+  被依赖: (无)
+
+theorem Cslib.CCS.Act.isVisible_neq_τ
+  陈述: theorem isVisible_neq_τ {μ : Act Name} (h : μ.IsVisible) : μ ≠ Act.τ :=
+  位置: Cslib/Languages/CCS/Basic.lean L65-66
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.CCS.bisimilarity_choice_idem
+  陈述: theorem bisimilarity_choice_idem :
+    (choice p p) ~[lts (defs := defs)] p :=
+  位置: Cslib/Languages/CCS/BehaviouralTheory.lean L174-186
+  依赖定理: (无)
+  外部premise(1):
+    - _private.Cslib.Languages.CCS.BehaviouralTheory.0.Cslib.CCS.ChoiceIdem   (via: exists ChoiceIdem)
+  被依赖: (无)
+
+theorem Cslib.CCS.bisimilarity_congr_choice
+  陈述: theorem bisimilarity_congr_choice :
+    (p ~[lts (defs := defs)] q) → (choice p r) ~[lts (defs := de
+  位置: Cslib/Languages/CCS/BehaviouralTheory.lean L311-372
+  依赖定理: (无)
+  外部premise(1):
+    - _private.Cslib.Languages.CCS.BehaviouralTheory.0.Cslib.CCS.ChoiceBisim   (via: exists @ChoiceBisim _ _ defs)
+  被依赖: (无)
+
+theorem Cslib.CCS.bisimilarity_par_comm
+  陈述: theorem bisimilarity_par_comm : (par p q) ~[lts (defs := defs)] (par q p) :=
+  位置: Cslib/Languages/CCS/BehaviouralTheory.lean L64-71
+  依赖定理: (无)
+  外部premise(2):
+    - _private.Cslib.Languages.CCS.BehaviouralTheory.0.Cslib.CCS.ParComm   (via: use ParComm, ParComm.parComm)
+    - _private.Cslib.Languages.CCS.BehaviouralTheory.0.Cslib.CCS.ParComm.parComm   (via: use ParComm, ParComm.parComm)
+  被依赖: (无)
+
+theorem Cslib.Crypto.Protocols.PerfectSecrecy.EncScheme.perfectlySecret_keySpace_ge
+  陈述: 
+  位置: Cslib/Crypto/Protocols/PerfectSecrecy/Basic.lean L46-49
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.Crypto.Protocols.PerfectSecrecy.EncScheme.posteriorMsgDist_apply
+  陈述: 
+  位置: Cslib/Crypto/Protocols/PerfectSecrecy/Defs.lean L64-69
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.Crypto.Protocols.PerfectSecrecy.encrypt_key_injective
+  陈述: 
+  位置: Cslib/Crypto/Protocols/PerfectSecrecy/Internal/PerfectSecrecy.lean L103-112
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.Crypto.Protocols.PerfectSecrecy.indep_of_ciphertextIndist
+  陈述: theorem indep_of_ciphertextIndist (scheme : EncScheme M K C)
+    (h : scheme.CiphertextIndist)
+    (
+  位置: Cslib/Crypto/Protocols/PerfectSecrecy/Internal/PerfectSecrecy.lean L67-77
+  依赖定理: (无)
+  外部premise(1):
+    - Cslib.Crypto.Protocols.PerfectSecrecy.jointDist_eq   (via: rw [jointDist_eq])
+  被依赖: (无)
+
+theorem Cslib.Crypto.Protocols.PerfectSecrecy.perfectlySecret_iff_indep
+  陈述: theorem perfectlySecret_iff_indep (scheme : EncScheme M K C) :
+    scheme.PerfectlySecret ↔
+    ∀ (m
+  位置: Cslib/Crypto/Protocols/PerfectSecrecy/Internal/PerfectSecrecy.lean L44-64
+  依赖定理(1): Cslib.Crypto.Protocols.PerfectSecrecy.jointDist_tsum_fst
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.Crypto.Protocols.SecretSharing.Shamir.Polynomial.degree_sharingPolynomial_tailPolynomial_lt_succ
+  陈述: 
+  位置: Cslib/Crypto/Protocols/SecretSharing/Shamir/Polynomial.lean L99-104
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.Crypto.Protocols.SecretSharing.Shamir.authorized_univ
+  陈述: theorem authorized_univ {F Party : Type*} [Field F] [Fintype Party]
+    (params : Params F Party) :
+
+  位置: Cslib/Crypto/Protocols/SecretSharing/Shamir.lean L94-97
+  依赖定理: (无)
+  外部premise(1):
+    - Cslib.Crypto.Protocols.SecretSharing.Shamir.authorized   (via: simpa [authorized] using Nat.succ_le_of_)
+  被依赖: (无)
+
+theorem Cslib.Crypto.Protocols.SecretSharing.Shamir.reconstruct_view_eq_secret
+  陈述: 
+  位置: Cslib/Crypto/Protocols/SecretSharing/Shamir.lean L318-325
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.Crypto.Protocols.SecretSharing.Shamir.schemeWith_authorized_iff
+  陈述: 
+  位置: Cslib/Crypto/Protocols/SecretSharing/Shamir.lean L298-301
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.FLTS.toLTS_tr
+  陈述: theorem toLTS_tr {flts : FLTS State Label} {s1 : State} {μ : Label} {s2 : State} :
+  flts.toLTS.Tr s
+  位置: Cslib/Foundations/Semantics/FLTS/FLTSToLTS.lean L30-31
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.FinFun.congrFinFun
+  陈述: theorem congrFinFun [Zero β] {f g : α →₀ β} (h : f = g) (a : α) : f a = g a :=
+  位置: Cslib/Foundations/Data/FinFun/Basic.lean L92-92
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.FinFun.eq_fields_eq
+  陈述: theorem eq_fields_eq [Zero β] {f g : α →₀ β} : f = g → f.fn = g.fn ∧ f.support = g.support :=
+  位置: Cslib/Foundations/Data/FinFun/Basic.lean L82-83
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.FinFun.fromFun_inter
+  陈述: theorem fromFun_inter [Zero β] [DecidableEq α]
+    [∀ y : β, Decidable (y = 0)] {f : α → β} {support
+  位置: Cslib/Foundations/Data/FinFun/Basic.lean L124-126
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.FinFun.update_idem
+  陈述: theorem update_idem (f : α →₀ β) : (f.update a b).update a b' = f.update a b' :=
+  位置: Cslib/Foundations/Data/FinFun/Update.lean L52-52
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.FreeM.FreeState.FreeWriter.FreeCont.FreeReader.run_withReader
+  陈述: theorem run_withReader (f : σ → σ) (m : FreeReader σ α) (s : σ) :
+    run (withTheReader σ f m) s = 
+  位置: Cslib/Foundations/Control/Monad/Free/Effects.lean L458-464
+  依赖定理: (无)
+  外部premise(2):
+    - Cslib.FreeM.FreeReader.instMonadWithReaderOf   (via: induction m generalizing s with
+| pure a; simpa [withTheReader, instMonadWithReade)
+    - Cslib.FreeM.FreeReader.run   (via: induction m generalizing s with
+| pure a; simpa [withTheReader, instMonadWithReade)
+  被依赖: (无)
+
+theorem Cslib.FreeM.FreeState.FreeWriter.FreeCont.run_callCC
+  陈述: @[simp]
+lemma run_callCC (f : MonadCont.Label α (FreeCont r) β → FreeCont r α) (k : α → r) :
+    run
+  位置: Cslib/Foundations/Control/Monad/Free/Effects.lean L376-380
+  依赖定理(1): Cslib.FreeM.FreeState.FreeWriter.FreeCont.run_liftBind_callCC
+  外部premise(1):
+    - Cslib.FreeM.FreeCont.callCC   (via: simp [callCC, run_liftBind_callCC])
+  被依赖: (无)
+
+theorem Cslib.FreeM.FreeState.FreeWriter.listen_liftBind_tell
+  陈述: @[simp]
+lemma listen_liftBind_tell [Monoid ω] (w : ω)
+    (k : PUnit → FreeWriter ω α) :
+    listen 
+  位置: Cslib/Foundations/Control/Monad/Free/Effects.lean L262-269
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.FreeM.FreeState.FreeWriter.listen_pure
+  陈述: 
+  位置: Cslib/Foundations/Control/Monad/Free/Effects.lean L258-260
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.FreeM.FreeState.FreeWriter.run_toWriterT
+  陈述: theorem run_toWriterT {α : Type u} [Monoid ω] (comp : FreeWriter ω α) :
+    (toWriterT comp).run = p
+  位置: Cslib/Foundations/Control/Monad/Free/Effects.lean L236-245
+  依赖定理(1): Cslib.FreeM.FreeState.FreeWriter.FreeCont.FreeReader.run_pure
+  外部premise(1):
+    - Cslib.FreeM.FreeWriter.run_liftBind_tell   (via: induction comp with
+| pure _ => simp onl; simp only [liftM_liftBind, run_liftBind_)
+  被依赖: (无)
+
+theorem Cslib.FreeM.FreeState.run_bind
+  陈述: @[simp]
+lemma run_bind (x : FreeState σ α) (f : α → FreeState σ β) (s₀ : σ) :
+    run (x.bind f) s₀ 
+  位置: Cslib/Foundations/Control/Monad/Free/Effects.lean L123-130
+  依赖定理: (无)
+  外部premise(1):
+    - Cslib.FreeM.FreeState.run   (via: cases op <;> simp [run, ih]; induction x generalizing f s₀ with
+| pur)
+  被依赖: (无)
+
+theorem Cslib.FreeM.Interprets.liftM
+  陈述: 
+  位置: Cslib/Foundations/Control/Monad/Free.lean L277-280
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.FreeM.bind_pure
+  陈述: 
+  位置: Cslib/Foundations/Control/Monad/Free.lean L160-163
+  依赖定理: (无)
+  外部premise(1):
+    - Cslib.FreeM.bind   (via: simp [FreeM.bind, bind_pure])
+  被依赖: (无)
+
+theorem Cslib.FreeM.liftM_lift
+  陈述: lemma liftM_lift [LawfulMonad m] (interp : {ι : Type u} → F ι → m ι) (op : F β) :
+    (lift op).lift
+  位置: Cslib/Foundations/Control/Monad/Free.lean L212-214
+  依赖定理: (无)
+  外部premise(3):
+    - Cslib.FreeM.liftM_liftBind   (via: simp_rw [lift_def, liftM_liftBind, liftM)
+    - Cslib.FreeM.liftM_pure   (via: simp_rw [lift_def, liftM_liftBind, liftM)
+    - Cslib.FreeM.lift_def   (via: simp_rw [lift_def, liftM_liftBind, liftM)
+  被依赖: (无)
+
+theorem Cslib.LTS.Bisimilarity.bisimilarity_neq_traceEq
+  陈述: theorem Bisimilarity.bisimilarity_neq_traceEq :
+    ∃ (State : Type) (Label : Type) (lts : LTS State
+  位置: Cslib/Foundations/Semantics/LTS/Bisimulation.lean L712-721
+  依赖定理: (无)
+  外部premise(3):
+    - Cslib.LTS.Bisimilarity.is_bisimulation   (via: have hb := Bisimilarity.is_bisimulation )
+    - Cslib.LTS.HomBisimilarity   (via: simp only [HomBisimilarity] at heq)
+    - Cslib.LTS.IsBisimulation.traceEq_not_bisim   (via: obtain ⟨State, Label, lts, h⟩ := IsBisim)
+  被依赖: (无)
+
+theorem Cslib.LTS.Execution.nonEmpty_states
+  陈述: theorem Execution.nonEmpty_states (h : lts.Execution s1 μs s2 ss) :
+    ss ≠ [] :=
+  位置: Cslib/Foundations/Semantics/LTS/Execution.lean L30-31
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.LTS.Execution.refl
+  陈述: theorem Execution.refl (lts : LTS State Label) (s : State) : lts.Execution s [] s [s] :=
+  位置: Cslib/Foundations/Semantics/LTS/Execution.lean L35-36
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.LTS.Execution.to_mTr
+  陈述: theorem Execution.to_mTr (hexec : lts.Execution s1 μs s2 ss) :
+    lts.MTr s1 μs s2 :=
+  位置: Cslib/Foundations/Semantics/LTS/Execution.lean L69-85
+  依赖定理: (无)
+  外部premise(1):
+    - Cslib.LTS.Execution.cons_invert   (via: apply Execution.cons_invert at hexec)
+  被依赖: (无)
+
+theorem Cslib.LTS.HomBisimilarity.refl
+  陈述: theorem HomBisimilarity.refl (s : State) : s ~[lts] s :=
+  位置: Cslib/Foundations/Semantics/LTS/Bisimulation.lean L121-123
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.LTS.HomSimulationEquiv.eqv
+  陈述: 
+  位置: Cslib/Foundations/Semantics/LTS/Simulation.lean L150-153
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.LTS.IsBisimulation.follow_snd
+  陈述: 
+  位置: Cslib/Foundations/Semantics/LTS/Bisimulation.lean L95-98
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.LTS.IsBisimulation.isSimulation
+  陈述: theorem IsBisimulation.isSimulation : IsBisimulation lts₁ lts₂ r → IsSimulation lts₁ lts₂ r :=
+  位置: Cslib/Foundations/Semantics/LTS/Bisimulation.lean L771-772
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.LTS.IsBisimulation.sup
+  陈述: theorem IsBisimulation.sup (hrb : IsBisimulation lts₁ lts₂ r) (hsb : IsBisimulation lts₁ lts₂ s) :
+ 
+  位置: Cslib/Foundations/Semantics/LTS/Bisimulation.lean L167-206
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.LTS.IsSWBisimulation.comp
+  陈述: theorem IsSWBisimulation.comp
+    [HasTau Label] {lts₁ : LTS State₁ Label} {lts₂ : LTS State₂ Label}
+  位置: Cslib/Foundations/Semantics/LTS/Bisimulation.lean L994-999
+  依赖定理(1): Cslib.LTS.IsSWBisimulation.comp
+  外部premise: (无)
+  被依赖: Cslib.LTS.IsSWBisimulation.comp
+
+theorem Cslib.LTS.OmegaExecution.append
+  陈述: theorem OmegaExecution.append
+    (hmtr : lts.MTr s μl t) (hωtr : lts.OmegaExecution ss μs) (hm : ss
+  位置: Cslib/Foundations/Semantics/LTS/OmegaExecution.lean L51-66
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.LTS.deterministic_image_char
+  陈述: theorem deterministic_image_char [lts.Deterministic] (s : State) (μ : Label) :
+    (∃ s', lts.image 
+  位置: Cslib/Foundations/Semantics/LTS/Basic.lean L251-252
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.LTS.isWeakBisimulation_iff_isSWBisimulation
+  陈述: theorem isWeakBisimulation_iff_isSWBisimulation
+    [HasTau Label] {lts₁ : LTS State₁ Label} {lts₂ :
+  位置: Cslib/Foundations/Semantics/LTS/Bisimulation.lean L884-941
+  依赖定理: (无)
+  外部premise(2):
+    - Cslib.LTS.IsSWBisimulation.follow_internal_fst   (via: obtain ⟨sb1, hstr1b, hrb⟩ := IsSWBisimul; obtain ⟨s₁', hstr1', hrb2⟩ := IsSWBisimu)
+    - Cslib.LTS.IsSWBisimulation.follow_internal_snd   (via: obtain ⟨sb1, hstr1b, hrb⟩ := IsSWBisimul; obtain ⟨s₁', hstr1', hrb2⟩ := IsSWBisimu)
+  被依赖: (无)
+
+theorem Cslib.LTS.mTr_iff_execution
+  陈述: theorem mTr_iff_execution :
+    lts.MTr s1 μs s2 ↔ ∃ ss : List State, lts.Execution s1 μs s2 ss :=
+  位置: Cslib/Foundations/Semantics/LTS/Execution.lean L90-92
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.LTS.mem_pairLang
+  陈述: 
+  位置: Cslib/Computability/Automata/NA/Pair.lean L28-29
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.LTS.pairLang_append
+  陈述: theorem LTS.pairLang_append {lts : LTS State Symbol} {s0 s1 s2 : State} {xs1 xs2 : List Symbol}
+    
+  位置: Cslib/Computability/Automata/NA/Pair.lean L58-61
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.LTS.pairViaLang_regular
+  陈述: theorem LTS.pairViaLang_regular [Inhabited Symbol] [Finite State] {lts : LTS State Symbol}
+    {via 
+  位置: Cslib/Computability/Automata/NA/Pair.lean L53-56
+  依赖定理: (无)
+  外部premise(1):
+    - Cslib.LTS.pairLang_regular   (via: grind [Language.IsRegular.mul, LTS.pairL)
+  被依赖: (无)
+
+theorem Cslib.LTS.saturate_τSTr_τSTr
+  陈述: theorem saturate_τSTr_τSTr [hHasTau : HasTau Label] (lts : LTS State Label)
+  : lts.saturate.τSTr s 
+  位置: Cslib/Foundations/Semantics/LTS/HasTau.lean L67-80
+  依赖定理: (无)
+  外部premise(2):
+    - Cslib.LTS.STr.tr   (via: case mpr =>
+  cases h
+  case refl => con; case tail s' h2 h3 =>
+  have h4 := STr.t; have h4 := STr.tr h2 h3 Relation.ReflTra)
+    - Cslib.LTS.sTr_τSTr   (via: case mp =>
+  induction h
+  case refl => ; case tail _ _ _ h2 h3 => exact Relation.; exact Relation.ReflTransGen.trans h3 ((s)
+  被依赖: (无)
+
+theorem Cslib.LTS.setImageMultistep_setImage_head
+  陈述: @[scoped grind =]
+lemma setImageMultistep_setImage_head (lts : LTS State Label) :
+  lts.setImageMult
+  位置: Cslib/Foundations/Semantics/LTS/Basic.lean L216-218
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.LTS.totalize.no_sink_to_nonsink
+  陈述: theorem totalize.no_sink_to_nonsink {μs : List Label} {t : State} :
+    ¬ lts.totalize.MTr (none) μs
+  位置: Cslib/Foundations/Semantics/LTS/Total.lean L78-84
+  依赖定理: (无)
+  外部premise(1):
+    - Cslib.LTS.totalize   (via: induction h <;> grind [totalize])
+  被依赖: (无)
+
+theorem Cslib.LTS.tr_setImage
+  陈述: theorem tr_setImage {lts : LTS State Label} (hs : s ∈ S) (htr : lts.Tr s μ s') :
+  s' ∈ lts.setImage
+  位置: Cslib/Foundations/Semantics/LTS/Basic.lean L198-199
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.LambdaCalculus.LocallyNameless.Fsub.Env.Wf.to_ok
+  陈述: @[scoped grind →]
+lemma Env.Wf.to_ok {Γ : Env Var} (wf : Γ.Wf) : Γ✓ :=
+  位置: Cslib/Languages/LambdaCalculus/LocallyNameless/Fsub/WellFormed.lean L57-60
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.LambdaCalculus.LocallyNameless.Fsub.Sub.narrow_aux
+  陈述: lemma narrow_aux
+    (trans : ∀ Γ σ τ, Sub Γ σ δ → Sub Γ δ τ → Sub Γ σ τ)
+    (sub₁ : Sub (Γ ++ ⟨X, 
+  位置: Cslib/Languages/LambdaCalculus/LocallyNameless/Fsub/Subtype.lean L80-102
+  依赖定理(2): Cslib.LambdaCalculus.LocallyNameless.Fsub.Sub.weaken, Cslib.LambdaCalculus.LocallyNameless.Fsub.Typing.wf
+  外部premise(2):
+    - Cslib.LambdaCalculus.LocallyNameless.Fsub.Sub.all   (via: apply Sub.all (free_union Var) <;> grind; case all => apply Sub.all (free_union Va)
+    - Cslib.LambdaCalculus.LocallyNameless.Fsub.Sub.trans_tvar   (via: grind only [= append_assoc, = Option.or_)
+  被依赖: (无)
+
+theorem Cslib.LambdaCalculus.LocallyNameless.Fsub.Term.Red.lc
+  陈述: lemma Red.lc {t t' : Term Var} (red : t ⭢βᵛ t') : t.LC ∧ t'.LC :=
+  位置: Cslib/Languages/LambdaCalculus/LocallyNameless/Fsub/Reduction.lean L104-114
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.LambdaCalculus.LocallyNameless.Fsub.Term.Value.lc
+  陈述: @[grind →]
+lemma Value.lc {t : Term Var} (val : t.Value) : t.LC :=
+  位置: Cslib/Languages/LambdaCalculus/LocallyNameless/Fsub/Reduction.lean L83-85
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.LambdaCalculus.LocallyNameless.Fsub.Term.open_tm_body
+  陈述: @[scoped grind <=]
+lemma open_tm_body (body : t₁.body) (lc : t₂.LC) : (t₁ ^ᵗᵗ t₂).LC :=
+  位置: Cslib/Languages/LambdaCalculus/LocallyNameless/Fsub/Reduction.lean L67-71
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.LambdaCalculus.LocallyNameless.Fsub.Ty.Term.Binding.substTy
+  陈述: @[scoped grind _=_]
+lemma substTy : (ty γ)[X := δ] = ty (γ[X := δ]) :=
+  位置: Cslib/Languages/LambdaCalculus/LocallyNameless/Fsub/Opening.lean L419-420
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.LambdaCalculus.LocallyNameless.Fsub.Ty.Term.openRecTm_substTy
+  陈述: lemma openRecTm_substTy (y : ℕ) (t₁ t₂ : Term Var) (δ : Ty Var) (X : Var) :
+    (t₁⟦y ↝ t₂⟧ᵗᵗ)[X := 
+  位置: Cslib/Languages/LambdaCalculus/LocallyNameless/Fsub/Opening.lean L344-347
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.LambdaCalculus.LocallyNameless.Fsub.Ty.Term.openRecTm_ty_eq
+  陈述: @[scoped grind .]
+lemma openRecTm_ty_eq (eq : t⟦x ↝ s⟧ᵗᵗ = t⟦x ↝ s⟧ᵗᵗ⟦y ↝ δ⟧ᵗᵞ) : t = t⟦y ↝ δ⟧ᵗᵞ
+  :
+  位置: Cslib/Languages/LambdaCalculus/LocallyNameless/Fsub/Opening.lean L220-223
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.LambdaCalculus.LocallyNameless.Fsub.Ty.Term.openRecTy_lc
+  陈述: @[scoped grind =_]
+lemma openRecTy_lc {t : Term Var} (lc : t.LC) : t = t⟦X ↝ σ⟧ᵗᵞ :=
+  位置: Cslib/Languages/LambdaCalculus/LocallyNameless/Fsub/Opening.lean L225-231
+  依赖定理: (无)
+  外部premise(6):
+    - Cslib.LambdaCalculus.LocallyNameless.Fsub.Term.LC.abs   (via: induction lc generalizing X with
+| let' )
+    - Cslib.LambdaCalculus.LocallyNameless.Fsub.Term.LC.case   (via: induction lc generalizing X with
+| let' )
+    - Cslib.LambdaCalculus.LocallyNameless.Fsub.Term.LC.let'   (via: induction lc generalizing X with
+| let' )
+    - Cslib.LambdaCalculus.LocallyNameless.Fsub.Term.LC.tabs   (via: induction lc generalizing X with
+| let' )
+    - Cslib.LambdaCalculus.LocallyNameless.Fsub.Term.openRecTy_neq_eq   (via: grind [fresh_exists <| free_union Var, T; induction lc generalizing X with
+| let' )
+    - Cslib.LambdaCalculus.LocallyNameless.Fsub.Ty.openRec_lc   (via: grind [Ty.openRec_lc]; grind [fresh_exists <| free_union Var, T; induction lc generalizing X with
+| let' )
+  被依赖: (无)
+
+theorem Cslib.LambdaCalculus.LocallyNameless.Fsub.Ty.Term.openRecTy_substTy
+  陈述: lemma openRecTy_substTy (Y : ℕ) (t : Term Var) (σ : Ty Var) (lc : δ.LC) (X : Var) :
+    (t⟦Y ↝ σ⟧ᵗᵞ)
+  位置: Cslib/Languages/LambdaCalculus/LocallyNameless/Fsub/Opening.lean L259-262
+  依赖定理(1): Cslib.LambdaCalculus.LocallyNameless.Fsub.Ty.openRec_subst
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.LambdaCalculus.LocallyNameless.Fsub.Ty.Term.openTm_substTy_var
+  陈述: lemma openTm_substTy_var (t₁ : Term Var) (δ : Ty Var) (X y : Var) :
+    (t₁ ^ᵗᵗ fvar y)[X := δ] = (t
+  位置: Cslib/Languages/LambdaCalculus/LocallyNameless/Fsub/Opening.lean L353-355
+  依赖定理: (无)
+  外部premise(1):
+    - Cslib.LambdaCalculus.LocallyNameless.Fsub.Term.openTm_substTy   (via: grind [openTm_substTy])
+  被依赖: (无)
+
+theorem Cslib.LambdaCalculus.LocallyNameless.Fsub.Ty.Term.openTy_substTm
+  陈述: 
+  位置: Cslib/Languages/LambdaCalculus/LocallyNameless/Fsub/Opening.lean L362-364
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.LambdaCalculus.LocallyNameless.Fsub.Ty.Term.openTy_substTy_var
+  陈述: lemma openTy_substTy_var (t : Term Var) (neq : Y ≠ X) (lc : δ.LC) :
+    (t ^ᵗᵞ .fvar Y)[X := δ] = t[
+  位置: Cslib/Languages/LambdaCalculus/LocallyNameless/Fsub/Opening.lean L268-270
+  依赖定理: (无)
+  外部premise(1):
+    - Cslib.LambdaCalculus.LocallyNameless.Fsub.Term.openTy_substTy   (via: grind [openTy_substTy])
+  被依赖: (无)
+
+theorem Cslib.LambdaCalculus.LocallyNameless.Fsub.Ty.Term.substTm_def
+  陈述: @[scoped grind _=_]
+lemma substTm_def : substTm (x : Var) (s : Term Var) (t : Term Var) = t[x := s] 
+  位置: Cslib/Languages/LambdaCalculus/LocallyNameless/Fsub/Opening.lean L300-301
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.LambdaCalculus.LocallyNameless.Fsub.Ty.Wf.Env.Wf.map_subst_nmem
+  陈述: lemma map_subst_nmem (Γ : Env Var) (X : Var) (σ : Ty Var) (wf : Γ.Wf) (nmem : X ∉ Γ.dom) :
+    Γ = Γ
+  位置: Cslib/Languages/LambdaCalculus/LocallyNameless/Fsub/WellFormed.lean L186-189
+  依赖定理: (无)
+  外部premise(1):
+    - Cslib.LambdaCalculus.LocallyNameless.Fsub.Ty.Wf.nmem_fv   (via: induction wf <;> grind [Ty.Wf.nmem_fv, B)
+  被依赖: (无)
+
+theorem Cslib.LambdaCalculus.LocallyNameless.Fsub.Ty.Wf.Env.Wf.narrow
+  陈述: lemma narrow (wf_env : Env.Wf (Γ ++ ⟨X, Binding.sub τ⟩ :: Δ)) (wf_τ' : τ'.Wf Δ) :
+    Env.Wf (Γ ++ ⟨
+  位置: Cslib/Languages/LambdaCalculus/LocallyNameless/Fsub/WellFormed.lean L166-170
+  依赖定理(1): Cslib.LambdaCalculus.LocallyNameless.Fsub.Ty.Wf.Env.Wf.narrow
+  外部premise(1):
+    - Cslib.LambdaCalculus.LocallyNameless.Fsub.Env.Wf   (via: induction Γ <;> cases wf_env <;>
+grind [)
+  被依赖: Cslib.LambdaCalculus.LocallyNameless.Fsub.Ty.Wf.Env.Wf.narrow
+
+theorem Cslib.LambdaCalculus.LocallyNameless.Fsub.Ty.Wf.lc
+  陈述: theorem lc (wf : σ.Wf Γ) : σ.LC :=
+  位置: Cslib/Languages/LambdaCalculus/LocallyNameless/Fsub/WellFormed.lean L69-72
+  依赖定理: (无)
+  外部premise(1):
+    - Cslib.LambdaCalculus.LocallyNameless.Fsub.Ty.Wf.all   (via: induction wf with
+| all => grind [LC.all)
+  被依赖: (无)
+
+theorem Cslib.LambdaCalculus.LocallyNameless.Fsub.Ty.Wf.of_env_ty
+  陈述: lemma of_env_ty (wf : Env.Wf (⟨X, Binding.ty σ⟩ :: Γ)) : σ.Wf Γ :=
+  位置: Cslib/Languages/LambdaCalculus/LocallyNameless/Fsub/WellFormed.lean L143-146
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.LambdaCalculus.LocallyNameless.Fsub.Ty.nmem_fv_open
+  陈述: 
+  位置: Cslib/Languages/LambdaCalculus/LocallyNameless/Fsub/Opening.lean L136-137
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.LambdaCalculus.LocallyNameless.Fsub.Ty.openRec_subst_intro
+  陈述: lemma openRec_subst_intro (Y : ℕ) (δ : Ty Var) (nmem : X ∉ γ.fv) :
+    γ⟦Y ↝ δ⟧ᵞ = (γ⟦Y ↝ fvar X⟧ᵞ)[
+  位置: Cslib/Languages/LambdaCalculus/LocallyNameless/Fsub/Opening.lean L116-119
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.LambdaCalculus.LocallyNameless.Fsub.Typing.inr_inv
+  陈述: lemma inr_inv (der : Typing Γ (.inr t) T) (sub : Sub Γ T (sum γ δ)) :
+    ∃ δ', Typing Γ t δ' ∧ Sub 
+  位置: Cslib/Languages/LambdaCalculus/LocallyNameless/Fsub/Typing.lean L212-216
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.LambdaCalculus.LocallyNameless.Stlc.Typing.perm
+  陈述: theorem perm (ht : Γ ⊢ t ∶ τ) (hperm : Γ.Perm Δ) : Δ ⊢ t ∶ τ :=
+  位置: Cslib/Languages/LambdaCalculus/LocallyNameless/Stlc/Basic.lean L70-76
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.LambdaCalculus.LocallyNameless.Stlc.Typing.weaken_aux
+  陈述: lemma weaken_aux (der : Γ ++ Δ ⊢ t ∶ τ) : (Γ ++ Θ ++ Δ)✓ → (Γ ++ Θ ++ Δ) ⊢ t ∶ τ :=
+  位置: Cslib/Languages/LambdaCalculus/LocallyNameless/Stlc/Basic.lean L78-83
+  依赖定理: (无)
+  外部premise(1):
+    - Cslib.LambdaCalculus.LocallyNameless.Stlc.Typing.abs   (via: grind [Typing.abs (xs ∪ (Γ ++ Θ ++ Δ).do; induction der generalizing Γ Δ Θ with
+| )
+  被依赖: (无)
+
+theorem Cslib.LambdaCalculus.LocallyNameless.Stlc.entailsContext_cons
+  陈述: lemma entailsContext_cons (E : Term.Env Var) (Γ : Context Var (Ty Base))
+    (x : Var) (τ : Ty Base)
+  位置: Cslib/Languages/LambdaCalculus/LocallyNameless/Stlc/StrongNorm.lean L86-94
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.LambdaCalculus.LocallyNameless.Untyped.Term.FullBeta.redex_app_l_cong
+  陈述: theorem redex_app_l_cong (redex : M ↠βᶠ M') (lc_N : LC N) : app M N ↠βᶠ app M' N :=
+  位置: Cslib/Languages/LambdaCalculus/LocallyNameless/Untyped/FullBeta.lean L58-59
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.LambdaCalculus.LocallyNameless.Untyped.Term.FullBeta.step_lc_l
+  陈述: @[scoped grind →]
+lemma step_lc_l (step : M ⭢βᶠ M') : LC M :=
+  位置: Cslib/Languages/LambdaCalculus/LocallyNameless/Untyped/FullBeta.lean L49-54
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.LambdaCalculus.LocallyNameless.Untyped.Term.FullBeta.steps_open_cong_l_abs
+  陈述: lemma steps_open_cong_l_abs
+  (s s' t : Term Var) (steps : s.abs ↠βᶠ s'.abs) (lc_s : LC s.abs) (lc_t
+  位置: Cslib/Languages/LambdaCalculus/LocallyNameless/Untyped/FullBeta.lean L150-159
+  依赖定理: (无)
+  外部premise(2):
+    - Cslib.LambdaCalculus.LocallyNameless.Untyped.Term.FullBeta.invert_steps_abs   (via: cases step with grind [invert_steps_abs,; induction steps generalizing s s' with
+|)
+    - Cslib.LambdaCalculus.LocallyNameless.Untyped.Term.FullBeta.step_open_cong_l   (via: cases step with grind [invert_steps_abs,; induction steps generalizing s s' with
+|)
+  被依赖: (无)
+
+theorem Cslib.LambdaCalculus.LocallyNameless.Untyped.Term.FullBeta.steps_subst_cong_r
+  陈述: lemma steps_subst_cong_r {x : Var} (s t t' : Term Var) (step : t ↠βᶠ t') (h_lc : LC s) :
+    (s [ x 
+  位置: Cslib/Languages/LambdaCalculus/LocallyNameless/Untyped/FullBeta.lean L178-182
+  依赖定理: (无)
+  外部premise(1):
+    - Cslib.LambdaCalculus.LocallyNameless.Untyped.Term.FullBeta.step_subst_cong_r   (via: grind [Relation.ReflTransGen.trans, step; induction step with
+| refl => rfl
+| tail)
+  被依赖: (无)
+
+theorem Cslib.LambdaCalculus.LocallyNameless.Untyped.Term.FullBetaEta.redex_app_r_cong
+  陈述: theorem redex_app_r_cong (redex : M ↠βηᶠ M') (lc_N : LC N) : app N M ↠βηᶠ app N M' :=
+  位置: Cslib/Languages/LambdaCalculus/LocallyNameless/Untyped/FullBetaEta.lean L49-56
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.LambdaCalculus.LocallyNameless.Untyped.Term.FullEta.close_eta_steps
+  陈述: lemma close_eta_steps (hx_M : x ∉ M.fv) (st_M : ReflGen FullEta (M ^ fvar x) N) :
+    ReflGen FullEt
+  位置: Cslib/Languages/LambdaCalculus/LocallyNameless/Untyped/FullEta.lean L151-156
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.LambdaCalculus.LocallyNameless.Untyped.Term.FullEta.step_lc_l
+  陈述: lemma step_lc_l [HasFresh Var] (step : M ⭢ηᶠ M') : LC M :=
+  位置: Cslib/Languages/LambdaCalculus/LocallyNameless/Untyped/FullEta.lean L47-53
+  依赖定理: (无)
+  外部premise(1):
+    - Cslib.LambdaCalculus.LocallyNameless.Untyped.Term.Eta.eta   (via: cases h_e with | eta => apply LC.abs ∅; ; induction step with
+| base h_e => cases )
+  被依赖: (无)
+
+theorem Cslib.LambdaCalculus.LocallyNameless.Untyped.Term.FullEta.steps_open_cong_r
+  陈述: lemma steps_open_cong_r {s t t' : Term Var} (lc_s : LC s.abs) (lc_t : LC t) (steps : t ↠ηᶠ t') :
+   
+  位置: Cslib/Languages/LambdaCalculus/LocallyNameless/Untyped/FullEta.lean L143-147
+  依赖定理: (无)
+  外部premise(2):
+    - Cslib.LambdaCalculus.LocallyNameless.Untyped.Term.FullEta.step_lc_r   (via: case head _ _ st _ ih => exact .trans (s; exact .trans (step_open_cong_r lc_s lc_t)
+    - Cslib.LambdaCalculus.LocallyNameless.Untyped.Term.FullEta.step_open_cong_r   (via: case head _ _ st _ ih => exact .trans (s; exact .trans (step_open_cong_r lc_s lc_t)
+  被依赖: (无)
+
+theorem Cslib.LambdaCalculus.LocallyNameless.Untyped.Term.FullEta.steps_subst_cong_r
+  陈述: lemma steps_subst_cong_r {x : Var} (s t t' : Term Var) (st : t ↠ηᶠ t') (lc_s : LC s) (lc_t : LC t) :
+  位置: Cslib/Languages/LambdaCalculus/LocallyNameless/Untyped/FullEta.lean L128-132
+  依赖定理: (无)
+  外部premise(2):
+    - Cslib.LambdaCalculus.LocallyNameless.Untyped.Term.FullEta.step_lc_r   (via: case head _ _ st _ ih => exact .trans (s; exact .trans (step_subst_cong_r s _ _ st)
+    - Cslib.LambdaCalculus.LocallyNameless.Untyped.Term.FullEta.step_subst_cong_r   (via: case head _ _ st _ ih => exact .trans (s; exact .trans (step_subst_cong_r s _ _ st)
+  被依赖: (无)
+
+theorem Cslib.LambdaCalculus.LocallyNameless.Untyped.Term.close_rec_fv
+  陈述: @[scoped grind =]
+lemma close_rec_fv {k y} (m : Term Var) : (m⟦k ↜ y⟧).fv = m.fv.erase y :=
+  位置: Cslib/Languages/LambdaCalculus/LocallyNameless/Untyped/Properties.lean L49-52
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.LambdaCalculus.LocallyNameless.Untyped.Term.close_var_not_fvar
+  陈述: 
+  位置: Cslib/Languages/LambdaCalculus/LocallyNameless/Untyped/Properties.lean L54-56
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.LambdaCalculus.LocallyNameless.Untyped.Term.confluence_beta
+  陈述: theorem confluence_beta : Confluent (@FullBeta Var) :=
+  位置: Cslib/Languages/LambdaCalculus/LocallyNameless/Untyped/FullBetaConfluence.lean L205-210
+  依赖定理: (无)
+  外部premise(3):
+    - Cslib.LambdaCalculus.LocallyNameless.Untyped.Term.Parallel   (via: have eq : ReflTransGen (@Parallel Var) =)
+    - Cslib.LambdaCalculus.LocallyNameless.Untyped.Term.para_confluence   (via: exact para_confluence)
+    - Cslib.LambdaCalculus.LocallyNameless.Untyped.Term.parachain_iff_redex   (via: exact parachain_iff_redex; have eq : ReflTransGen (@Parallel Var) =)
+  被依赖: (无)
+
+theorem Cslib.LambdaCalculus.LocallyNameless.Untyped.Term.depth_open_fvar_eq_depth
+  陈述: 
+  位置: Cslib/Languages/LambdaCalculus/LocallyNameless/Untyped/LcAt.lean L62-63
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.LambdaCalculus.LocallyNameless.Untyped.Term.multiSubst_preserves_not_fvar
+  陈述: lemma multiSubst_preserves_not_fvar (M : Term Var) (E : Env Var) :
+    (multiSubst E M).fv ⊆ M.fv ∪ 
+  位置: Cslib/Languages/LambdaCalculus/LocallyNameless/Untyped/MultiSubst.lean L64-68
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.LambdaCalculus.LocallyNameless.Untyped.Term.neutral_step
+  陈述: lemma neutral_step (Hneut : Neutral t) (Hstep : t ⭢βᶠ t') : Neutral t' :=
+  位置: Cslib/Languages/LambdaCalculus/LocallyNameless/Untyped/StrongNorm.lean L87-89
+  依赖定理: (无)
+  外部premise(2):
+    - Cslib.LambdaCalculus.LocallyNameless.Untyped.Term.Neutral   (via: induction Hneut generalizing t' with gri)
+    - Cslib.LambdaCalculus.LocallyNameless.Untyped.Term.sn_step   (via: induction Hneut generalizing t' with gri)
+  被依赖: (无)
+
+theorem Cslib.LambdaCalculus.LocallyNameless.Untyped.Term.open_eq_app
+  陈述: lemma open_eq_app {x : Var} {m n : Term Var} (hw_n : x ∉ n.fv) (hw_m : x ∉ m.fv) (lc_m : LC m)
+    (
+  位置: Cslib/Languages/LambdaCalculus/LocallyNameless/Untyped/Properties.lean L86-89
+  依赖定理(1): Cslib.LambdaCalculus.LocallyNameless.Fsub.Ty.Wf.open_lc
+  外部premise(1):
+    - Cslib.LambdaCalculus.LocallyNameless.Untyped.Term.open_injective   (via: apply open_injective x n _ hw_n (by grin)
+  被依赖: (无)
+
+theorem Cslib.LambdaCalculus.LocallyNameless.Untyped.Term.para_lc_r
+  陈述: @[scoped grind →]
+lemma para_lc_r (step : M ⭢ₚ N) : LC N :=
+  位置: Cslib/Languages/LambdaCalculus/LocallyNameless/Untyped/FullBetaConfluence.lean L66-72
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.LambdaCalculus.LocallyNameless.Untyped.Term.para_open_close
+  陈述: lemma para_open_close (x y z) (para : M ⭢ₚ M') : M⟦z ↜ x⟧⟦z ↝ fvar y⟧ ⭢ₚ M'⟦z ↜ x⟧⟦z ↝ fvar y⟧ :=
+  位置: Cslib/Languages/LambdaCalculus/LocallyNameless/Untyped/FullBetaConfluence.lean L124-126
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.LambdaCalculus.LocallyNameless.Untyped.Term.sn_neutral
+  陈述: lemma sn_neutral (Hneut : Neutral t) : SN FullBeta t :=
+  位置: Cslib/Languages/LambdaCalculus/LocallyNameless/Untyped/StrongNorm.lean L95-101
+  依赖定理: (无)
+  外部premise(3):
+    - Cslib.LambdaCalculus.LocallyNameless.Untyped.Term.Neutral.app   (via: induction Hneut with
+| app => grind [→ n)
+    - Cslib.LambdaCalculus.LocallyNameless.Untyped.Term.neutral_steps   (via: grind [→ neutral_steps, sn_app]; induction Hneut with
+| app => grind [→ n)
+    - Cslib.LambdaCalculus.LocallyNameless.Untyped.Term.sn_app   (via: grind [→ neutral_steps, sn_app]; induction Hneut with
+| app => grind [→ n)
+  被依赖: (无)
+
+theorem Cslib.LambdaCalculus.LocallyNameless.Untyped.Term.subst_fvar
+  陈述: lemma subst_fvar : (fvar x')[x := n] = if x = x' then n else fvar x' :=
+  位置: Cslib/Languages/LambdaCalculus/LocallyNameless/Untyped/Basic.lean L130-130
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.LambdaCalculus.LocallyNameless.Untyped.Term.subst_open
+  陈述: lemma subst_open (x : Var) (t : Term Var) (u e : Term Var) (lc : LC t) :
+    (e ^ u)[x := t] = e[x :
+  位置: Cslib/Languages/LambdaCalculus/LocallyNameless/Untyped/Properties.lean L97-99
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.LambdaCalculus.LocallyNameless.Untyped.Term.subst_openRec
+  陈述: @[scoped grind =]
+lemma subst_openRec (x : Var) (t : Term Var) (k : ℕ) (u e : Term Var) (lc : LC t) 
+  位置: Cslib/Languages/LambdaCalculus/LocallyNameless/Untyped/Properties.lean L91-95
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.LambdaCalculus.LocallyNameless.Untyped.Term.subst_open_var
+  陈述: theorem subst_open_var (x y : Var) (u e : Term Var) (neq : y ≠ x) (u_lc : LC u) :
+    (e ^ fvar x)[y
+  位置: Cslib/Languages/LambdaCalculus/LocallyNameless/Untyped/Properties.lean L102-103
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.LambdaCalculus.LocallyNameless.Untyped.Term.swap_open_fvar_close
+  陈述: lemma swap_open_fvar_close (k n : ℕ) (x y : Var) (m : Term Var) (neq₁ : k ≠ n) (neq₂ : x ≠ y) :
+    
+  位置: Cslib/Languages/LambdaCalculus/LocallyNameless/Untyped/Properties.lean L44-47
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.Language.IsRegular.iff_nfa
+  陈述: theorem IsRegular.iff_nfa {l : Language Symbol} :
+    l.IsRegular ↔ ∃ State : Type, ∃ _ : Finite Sta
+  位置: Cslib/Computability/Languages/RegularLanguage.lean L48-57
+  依赖定理: (无)
+  外部premise(1):
+    - Cslib.Language.IsRegular.iff_dfa   (via: rw [IsRegular.iff_dfa])
+  被依赖: (无)
+
+theorem Cslib.Language.IsRegular.inf
+  陈述: theorem IsRegular.inf {l1 l2 : Language Symbol}
+    (h1 : l1.IsRegular) (h2 : l2.IsRegular) : (l1 ⊓ 
+  位置: Cslib/Computability/Languages/RegularLanguage.lean L104-112
+  依赖定理: (无)
+  外部premise(1):
+    - Cslib.Language.IsRegular.iff_dfa   (via: rw [IsRegular.iff_dfa] at h1 h2 ⊢)
+  被依赖: (无)
+
+theorem Cslib.Logic.CLL.PhaseSpace.Fact.linImpl_iff_implies
+  陈述: lemma linImpl_iff_implies {G H : Fact P} : p ∈ G ⊸ H ↔ imp G H p :=
+  位置: Cslib/Logics/LinearLogic/CLL/PhaseSemantics/Basic.lean L506-518
+  依赖定理: (无)
+  外部premise(3):
+    - Cslib.Logic.CLL.PhaseSpace.dualFact_coe   (via: simp only [dualFact_coe, mem_dual, Set.m)
+    - Cslib.Logic.CLL.PhaseSpace.mem_dual   (via: simp only [dualFact_coe, mem_dual, Set.m)
+    - Cslib.Logic.CLL.PhaseSpace.of_Fact   (via: apply of_Fact _)
+  被依赖: (无)
+
+theorem Cslib.Logic.CLL.PhaseSpace.Fact.linImpl_par
+  陈述: lemma linImpl_par {G H K : Fact P} : (G ⊸ H ⅋ K) = ((G ⊸ H) ⅋ K) :=
+  位置: Cslib/Logics/LinearLogic/CLL/PhaseSemantics/Basic.lean L497-498
+  依赖定理(1): Cslib.Logic.CLL.PhaseSpace.Fact.par_of_tensor
+  外部premise(1):
+    - Cslib.Logic.CLL.PhaseSpace.Fact.linImpl_of_tensor   (via: simp [linImpl_of_tensor, par_of_tensor])
+  被依赖: (无)
+
+theorem Cslib.Logic.CLL.PhaseSpace.Fact.mul_subset_tensor
+  陈述: 
+  位置: Cslib/Logics/LinearLogic/CLL/PhaseSemantics/Basic.lean L488-488
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.Logic.CLL.PhaseSpace.Fact.neg_surjective
+  陈述: 
+  位置: Cslib/Logics/LinearLogic/CLL/PhaseSemantics/Basic.lean L368-369
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.Logic.CLL.PhaseSpace.Fact.neg_with
+  陈述: lemma neg_with {G H : Fact P} : (G & H)ᗮ = Gᗮ ⊕ Hᗮ :=
+  位置: Cslib/Logics/LinearLogic/CLL/PhaseSemantics/Basic.lean L559-559
+  依赖定理: (无)
+  外部premise(2):
+    - Cslib.Logic.CLL.PhaseSpace.Fact.neg_neg   (via: rw [with_eq_plus_dual, neg_neg])
+    - Cslib.Logic.CLL.PhaseSpace.Fact.with_eq_plus_dual   (via: rw [with_eq_plus_dual, neg_neg])
+  被依赖: (无)
+
+theorem Cslib.Logic.CLL.PhaseSpace.Fact.par_semi_distrib_plus
+  陈述: lemma par_semi_distrib_plus : ((G ⅋ H) ⊕ (G ⅋ K) : Fact P) ≤ G ⅋ (H ⊕ K) :=
+  位置: Cslib/Logics/LinearLogic/CLL/PhaseSemantics/Basic.lean L631-634
+  依赖定理: (无)
+  外部premise(4):
+    - Cslib.Logic.CLL.PhaseSpace.Fact.neg_le_neg_iff   (via: rw [← neg_le_neg_iff])
+    - Cslib.Logic.CLL.PhaseSpace.Fact.neg_par   (via: simp only [neg_par, neg_plus])
+    - Cslib.Logic.CLL.PhaseSpace.Fact.neg_plus   (via: simp only [neg_par, neg_plus])
+    - Cslib.Logic.CLL.PhaseSpace.Fact.tensor_semi_distrib_with   (via: exact tensor_semi_distrib_with)
+  被依赖: (无)
+
+theorem Cslib.Logic.CLL.PhaseSpace.Fact.plus_eq_with_dual
+  陈述: lemma plus_eq_with_dual : (G ⊕ H : Fact P) = (Gᗮ & Hᗮ)ᗮ :=
+  位置: Cslib/Logics/LinearLogic/CLL/PhaseSemantics/Basic.lean L550-553
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.Logic.CLL.PhaseSpace.Fact.plus_tensor_distrib
+  陈述: lemma plus_tensor_distrib : ((H ⊕ K) ⊗ G  : Fact P) = (H ⊗ G) ⊕ (K ⊗ G) :=
+  位置: Cslib/Logics/LinearLogic/CLL/PhaseSemantics/Basic.lean L604-605
+  依赖定理: (无)
+  外部premise(2):
+    - Cslib.Logic.CLL.PhaseSpace.Fact.tensor_comm   (via: rw [tensor_comm, tensor_distrib_plus]; simp [tensor_comm])
+    - Cslib.Logic.CLL.PhaseSpace.Fact.tensor_distrib_plus   (via: rw [tensor_comm, tensor_distrib_plus])
+  被依赖: (无)
+
+theorem Cslib.Logic.CLL.PhaseSpace.Fact.with_top
+  陈述: 
+  位置: Cslib/Logics/LinearLogic/CLL/PhaseSemantics/Basic.lean L571-571
+  依赖定理: (无)
+  外部premise(1):
+    - Cslib.Logic.CLL.PhaseSpace.Fact.withh   (via: simp [withh])
+  被依赖: (无)
+
+theorem Cslib.Logic.CLL.PhaseSpace.coe_mk
+  陈述: 
+  位置: Cslib/Logics/LinearLogic/CLL/PhaseSemantics/Basic.lean L193-193
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.Logic.CLL.PhaseSpace.coe_zero
+  陈述: 
+  位置: Cslib/Logics/LinearLogic/CLL/PhaseSemantics/Basic.lean L243-243
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.Logic.CLL.PhaseSpace.dual_dual_subset_Fact_iff
+  陈述: lemma dual_dual_subset_Fact_iff {G : Set P} {H : Fact P} : G⫠⫠ ⊆ H ↔ G ⊆ H :=
+  位置: Cslib/Logics/LinearLogic/CLL/PhaseSemantics/Basic.lean L210-211
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.Logic.CLL.PhaseSpace.iInter_eq_sInf_image
+  陈述: lemma iInter_eq_sInf_image {α} (S : Set α) (f : α → Set P) :
+    (⋂ x ∈ S, f x) = sInf (f '' S) :=
+  位置: Cslib/Logics/LinearLogic/CLL/PhaseSemantics/Basic.lean L312-313
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.Logic.CLL.PhaseSpace.inter_eq_orth_union_orth
+  陈述: @[scoped grind =, simp]
+lemma inter_eq_orth_union_orth (G H : Fact P) :
+    ((G : Set P) ∩ (H : Set 
+  位置: Cslib/Logics/LinearLogic/CLL/PhaseSemantics/Basic.lean L315-326
+  依赖定理(1): Cslib.Logic.CLL.PhaseSpace.orthogonal_def
+  外部premise(1):
+    - Cslib.Logic.CLL.PhaseSpace.Fact.eq   (via: grind [Fact.eq])
+  被依赖: (无)
+
+theorem Cslib.Logic.CLL.PhaseSpace.mem_carrier
+  陈述: 
+  位置: Cslib/Logics/LinearLogic/CLL/PhaseSemantics/Basic.lean L179-179
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.Logic.CLL.PhaseSpace.mem_one
+  陈述: 
+  位置: Cslib/Logics/LinearLogic/CLL/PhaseSemantics/Basic.lean L221-222
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.Logic.CLL.PhaseSpace.orth_iUnion
+  陈述: lemma orth_iUnion {ι : Sort*} (G : ι → Set P) :
+    (⋃ i, G i)⫠ = ⋂ i, (G i)⫠ :=
+  位置: Cslib/Logics/LinearLogic/CLL/PhaseSemantics/Basic.lean L117-131
+  依赖定理: (无)
+  外部premise(1):
+    - Cslib.Logic.CLL.PhaseSpace.bot   (via: have hm' : ∀ x ∈ ⋃ j, G j, m * x ∈ Phase)
+  被依赖: (无)
+
+theorem Cslib.Logic.CLL.PhaseSpace.triple_orth
+  陈述: lemma triple_orth (X : Set P) : X⫠⫠⫠ = X⫠ :=
+  位置: Cslib/Logics/LinearLogic/CLL/PhaseSemantics/Basic.lean L102-104
+  依赖定理: (无)
+  外部premise(1):
+    - Cslib.Logic.CLL.PhaseSpace.orth_extensive   (via: apply le_antisymm <;> grind [orth_extens)
+  被依赖: (无)
+
+theorem Cslib.Logic.CLL.PhaseSpace.zero_least_fact
+  陈述: lemma zero_least_fact :
+    ∀ {F : Set P}, isFact F → (0 : Fact P).carrier ⊆ F :=
+  位置: Cslib/Logics/LinearLogic/CLL/PhaseSemantics/Basic.lean L269-274
+  依赖定理: (无)
+  外部premise(1):
+    - Cslib.Logic.CLL.PhaseSpace.biorth_least_fact   (via: have h := biorth_least_fact (G := (∅ : S)
+  被依赖: (无)
+
+theorem Cslib.Logic.CLL.Proof.expand_onlyAtomicAxioms
+  陈述: theorem Proof.expand_onlyAtomicAxioms (a : Proposition Atom) : a.expand.onlyAtomicAxioms :=
+  位置: Cslib/Logics/LinearLogic/CLL/EtaExpansion.lean L121-134
+  依赖定理: (无)
+  外部premise(3):
+    - Cslib.Logic.CLL.Proof.onlyAtomicAxioms   (via: induction a with
+| one =>
+  rw [←dual_in; simp [expand, onlyAtomicAxioms, dual]; simp [expand, onlyAtomicAxioms])
+    - Cslib.Logic.CLL.Proposition.expand   (via: grind [Proposition.expand]; induction a with
+| one =>
+  rw [←dual_in; simp [expand, onlyAtomicAxioms, dual]; simp [expand, onlyAtomicAxioms])
+    - _private.Cslib.Logics.LinearLogic.CLL.EtaExpansion.0.Cslib.Logic.CLL.Proof.expand_onlyAtomicAxioms_dual   (via: apply expand_onlyAtomicAxioms_dual; induction a with
+| one =>
+  rw [←dual_in)
+  被依赖: (无)
+
+theorem Cslib.Logic.CLL.Proof.onlyAtomicAxioms_rwConclusion
+  陈述: theorem Proof.onlyAtomicAxioms_rwConclusion {Γ Δ : Sequent Atom} {heq : Γ = Δ} {p : ⇓Γ}
+    (h : p.o
+  位置: Cslib/Logics/LinearLogic/CLL/EtaExpansion.lean L99-101
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.Logic.CLL.Proposition.Equiv.symm
+  陈述: 
+  位置: Cslib/Logics/LinearLogic/CLL/Basic.lean L298-298
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.Logic.CLL.Proposition.Proposition.equiv_with₁
+  陈述: @[local grind .]
+private lemma Proposition.equiv_with₁ {a a' b : Proposition Atom} (h : a ≡ a') :
+  
+  位置: Cslib/Logics/LinearLogic/CLL/Basic.lean L536-564
+  依赖定理: (无)
+  外部premise(5):
+    - Cslib.Logic.CLL.Proof.ax'   (via: exact Proof.ax')
+    - Cslib.Logic.CLL.Proof.oplus₁   (via: apply Proof.oplus₁)
+    - Cslib.Logic.CLL.Proof.oplus₂   (via: apply Proof.oplus₂)
+    - Cslib.Logic.CLL.Proof.with   (via: apply Proof.with)
+    - Cslib.Logic.CLL.Proposition.dual   (via: simp only [Proposition.dual])
+  被依赖: (无)
+
+theorem Cslib.Logic.HML.bisimulation_satisfies
+  陈述: @[scoped grind ⇒]
+lemma bisimulation_satisfies {lts : LTS State Label}
+    {hrb : lts.IsHomBisimulat
+  位置: Cslib/Logics/HML/Basic.lean L236-245
+  依赖定理: (无)
+  外部premise(2):
+    - Cslib.Logic.HML.Proposition.diamond   (via: induction a generalizing s1 s2 with
+| di)
+    - Cslib.Logic.HML.Satisfies.diamond   (via: cases hs with | diamond htr _ => grind [; induction a generalizing s1 s2 with
+| di)
+  被依赖: (无)
+
+theorem Cslib.Logic.HML.propositions_complete
+  陈述: theorem propositions_complete (s' : lts.image s μ) : stateMap s' ∈ propositions stateMap :=
+  位置: Cslib/Logics/HML/Basic.lean L186-188
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.Logic.HML.satisfies_finiteOr
+  陈述: theorem satisfies_finiteOr {lts : LTS State Label} {s : State}
+    {as : List (Proposition Label)} :
+  位置: Cslib/Logics/HML/Basic.lean L149-152
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.Logic.HML.theoryEq_eq_bisimilarity
+  陈述: theorem theoryEq_eq_bisimilarity (lts : LTS State Label)
+    [image_finite : ∀ s μ, Finite (lts.imag
+  位置: Cslib/Logics/HML/Basic.lean L255-264
+  依赖定理: (无)
+  外部premise(2):
+    - Cslib.Logic.HML.TheoryEq   (via: exists TheoryEq lts)
+    - Cslib.Logic.HML.bisimulation_TheoryEq   (via: apply bisimulation_TheoryEq hr)
+  被依赖: (无)
+
+theorem Cslib.Logic.InferenceSystem.DerivableIn.fromDerivation
+  陈述: 
+  位置: Cslib/Foundations/Logic/InferenceSystem.lean L51-52
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.Logic.Modal.Satisfies.b
+  陈述: theorem Satisfies.b {m : Model World Atom} [Std.Symm m.r] {w : World} (φ : Proposition Atom) :
+    ⇓
+  位置: Cslib/Logics/Modal/Basic.lean L194-197
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.Logic.Modal.Satisfies.d
+  陈述: theorem Satisfies.d {m : Model World Atom} [Relation.Serial m.r] {w} (φ : Proposition Atom) :
+    ⇓M
+  位置: Cslib/Logics/Modal/Basic.lean L244-247
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.Logic.Modal.Satisfies.t_box_diamond
+  陈述: theorem Satisfies.t_box_diamond [Std.Refl m.r] : ⇓Modal[m,w ⊨ □φ → φ] ↔ ⇓Modal[m,w ⊨ φ → ◇φ] :=
+  位置: Cslib/Logics/Modal/Basic.lean L189-191
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.Logic.Modal.T.t_valid
+  陈述: theorem T.t_valid : (φ → ◇φ : Proposition Atom) ∈ T World Atom :=
+  位置: Cslib/Logics/Modal/Cube.lean L133-135
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.Logic.Modal.k_subset_four
+  陈述: theorem k_subset_four : (K World Atom ⊆ Four World Atom) :=
+  位置: Cslib/Logics/Modal/Cube.lean L104-105
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.Logic.Modal.theoryEq_denotation_eq
+  陈述: theorem theoryEq_denotation_eq {m : Model World Atom} {w₁ w₂ : World} :
+    (TheoryEq m w₁ w₂) ↔
+   
+  位置: Cslib/Logics/Modal/Denotation.lean L46-49
+  依赖定理: (无)
+  外部premise(1):
+    - Cslib.Logic.Modal.satisfies_mem_denotation   (via: apply Iff.intro <;> grind [_=_ satisfies)
+  被依赖: (无)
+
+theorem Cslib.Logic.Modal.theoryEq_satisfies
+  陈述: theorem theoryEq_satisfies {m : Model World Atom} (h : TheoryEq m w₁ w₂)
+    (hs : Satisfies m w₁ φ)
+  位置: Cslib/Logics/Modal/Basic.lean L159-162
+  依赖定理: (无)
+  外部premise(1):
+    - Cslib.Logic.Modal.TheoryEq.ext_iff   (via: apply TheoryEq.ext_iff.1 at h)
+  被依赖: (无)
+
+theorem Cslib.Logic.PL.DerivableIn.weakTheory
+  陈述: 
+  位置: Cslib/Logics/Propositional/NaturalDeduction/Basic.lean L201-203
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.Logic.PL.Theory.Equiv.refl
+  陈述: theorem Equiv.refl {T : Theory Atom} (A : Proposition Atom) : A ≡[T] A :=
+  位置: Cslib/Logics/Propositional/NaturalDeduction/Basic.lean L364-365
+  依赖定理: (无)
+  外部premise(1):
+    - Cslib.Logic.PL.Theory.equiv.refl   (via: exact ⟨equiv.refl A⟩)
+  被依赖: (无)
+
+theorem Cslib.Logic.PL.Theory.equiv_iff_equiv_derivableIn
+  陈述: theorem equiv_iff_equiv_derivableIn {A B : Proposition Atom} :
+    A ≡[T] B ↔ ∀ Γ : Ctx Atom, Deriva
+  位置: Cslib/Logics/Propositional/NaturalDeduction/Basic.lean L338-347
+  依赖定理: (无)
+  外部premise(3):
+    - Cslib.Logic.PL.Theory.Derivation.ass   (via: exact (h {A}).mp ⟨ass <| by grind⟩; exact (h {B}).mpr ⟨ass <| by grind⟩)
+    - Cslib.Logic.PL.Theory.equiv_iff   (via: rw [equiv_iff])
+    - Cslib.Logic.PL.Theory.mapEquivConclusion   (via: exact ⟨fun D => mapEquivConclusion Γ e D)
+  被依赖: (无)
+
+theorem Cslib.Logic.PL.Theory.instIsClassicalExtention
+  陈述: theorem instIsClassicalExtention [Bot Atom] {T T' : Theory Atom} [IsClassical T] (h : T ⊆ T') :
+    
+  位置: Cslib/Logics/Propositional/Defs.lean L143-144
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.Logic.PL.Theory.instIsIntuitionisticExtention
+  陈述: theorem instIsIntuitionisticExtention [Bot Atom] {T T' : Theory Atom} [IsIntuitionistic T]
+    (h : 
+  位置: Cslib/Logics/Propositional/Defs.lean L138-139
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.MachineLearning.PACLearning.IsPACLearnable.sampleComplexity_mono_family
+  陈述: 
+  位置: Cslib/MachineLearning/PACLearning/Defs.lean L441-445
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.MachineLearning.PACLearning.IsPACLearnable.toIsRPACLearnable
+  陈述: theorem IsPACLearnable.toIsRPACLearnable {C : ConceptClass α β}
+    {𝒟 : Set (Measure (α × β))} (h :
+  位置: Cslib/MachineLearning/PACLearning/Defs.lean L298-303
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.MachineLearning.PACLearning.IsPACLearnerFor.mono_δ
+  陈述: theorem IsPACLearnerFor.mono_δ {m : ℕ} {ε : Set.Ioo (0 : ℝ≥0) 1}
+    {δ₁ δ₂ : Set.Ioo (0 : ℝ≥0) 1} (
+  位置: Cslib/MachineLearning/PACLearning/Defs.lean L217-224
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.MachineLearning.PACLearning.IsRPACLearnable.rsampleComplexity_mono_family
+  陈述: 
+  位置: Cslib/MachineLearning/PACLearning/Defs.lean L463-467
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.MachineLearning.PACLearning.rsampleComplexity_mono_family
+  陈述: 
+  位置: Cslib/MachineLearning/PACLearning/Defs.lean L412-416
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.MachineLearning.PACLearning.sampleComplexity_antitone_δ
+  陈述: 
+  位置: Cslib/MachineLearning/PACLearning/Defs.lean L374-378
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.MachineLearning.PACLearning.sampleComplexity_mono_C
+  陈述: 
+  位置: Cslib/MachineLearning/PACLearning/Defs.lean L398-402
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.Probability.PMF.posteriorDist_eq_prior_of_outputIndist
+  陈述: theorem posteriorDist_eq_prior_of_outputIndist (p : PMF α) (f : α → PMF β)
+    (h : ∀ a₀ a₁ : α, f a
+  位置: Cslib/Probability/PMF.lean L116-131
+  依赖定理: (无)
+  外部premise(2):
+    - Cslib.Probability.PMF.bind_pair_apply   (via: rw [posteriorDist_apply, bind_pair_apply)
+    - Cslib.Probability.PMF.posteriorDist_apply   (via: rw [posteriorDist_apply, bind_pair_apply)
+  被依赖: (无)
+
+theorem Cslib.SKI.Church_succ
+  陈述: 
+  位置: Cslib/Languages/CombinatoryLogic/Recursion.lean L75-75
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.SKI.FF_correct
+  陈述: 
+  位置: Cslib/Languages/CombinatoryLogic/Basic.lean L276-279
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.SKI.List.headD_def
+  陈述: 
+  位置: Cslib/Languages/CombinatoryLogic/List.lean L134-135
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.SKI.List.nil_def
+  陈述: 
+  位置: Cslib/Languages/CombinatoryLogic/List.lean L73-74
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.SKI.Polynomial.elimVar_correct
+  陈述: theorem Polynomial.elimVar_correct {n : Nat} (Γ : SKI.Polynomial (n + 1)) {ys : List SKI}
+    (hys :
+  位置: Cslib/Languages/CombinatoryLogic/Basic.lean L91-118
+  依赖定理: (无)
+  外部premise(1):
+    - Cslib.SKI.Polynomial.eval   (via: simp_rw [SKI.Polynomial.eval, Fin.getEle; simp_rw [SKI.Polynomial.eval, h, Fin.get)
+  被依赖: (无)
+
+theorem Cslib.SKI.church_red
+  陈述: lemma church_red (n : Nat) (f f' x x' : SKI) (hf : f ↠ f') (hx : x ↠ x') :
+    Church n f x ↠ Church
+  位置: Cslib/Languages/CombinatoryLogic/Recursion.lean L77-82
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.SKI.confluent_redexFree
+  陈述: 
+  位置: Cslib/Languages/CombinatoryLogic/Evaluation.lean L185-188
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.SKI.evalStep_right_correct
+  陈述: 
+  位置: Cslib/Languages/CombinatoryLogic/Evaluation.lean L90-132
+  依赖定理: (无)
+  外部premise(1):
+    - Cslib.SKI.evalStep   (via: simp only [evalStep, hx, Sum.inr.injEq] ; simp only [habcd, he, evalStep, Sum.inr.; simp only [habcd, he, evalStep, reduceCt; simp only [hx, evalStep, reduceCtorEq] a; simp only [hx, hy, evalStep, Sum.inr.inj; simp only [hx, hy, evalStep, reduceCtorE)
+  被依赖: (无)
+
+theorem Cslib.SKI.fixedPoint_correct
+  陈述: 
+  位置: Cslib/Languages/CombinatoryLogic/Basic.lean L239-239
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.SKI.isBool_injective
+  陈述: theorem isBool_injective (x y : SKI) (u v : Bool) (hx : IsBool u x) (hy : IsBool v y)
+    (hxy : MJo
+  位置: Cslib/Languages/CombinatoryLogic/Evaluation.lean L212-223
+  依赖定理: (无)
+  外部premise(1):
+    - Cslib.SKI.sk_nequiv   (via: grind [sk_nequiv, mJoin_red_equivalence.)
+  被依赖: (无)
+
+theorem Cslib.SKI.isBool_trans
+  陈述: theorem isBool_trans (u : Bool) (a a' : SKI) (h : a ↠ a') (ha' : IsBool u a') :
+    IsBool u a :=
+  位置: Cslib/Languages/CombinatoryLogic/Basic.lean L259-266
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.SKI.isChurchList_trans
+  陈述: theorem isChurchList_trans {ns : List ℕ} {cns cns' : SKI} (h : cns ↠ cns')
+    (hcns' : IsChurchList
+  位置: Cslib/Languages/CombinatoryLogic/List.lean L36-45
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.SKI.mul_correct
+  陈述: theorem mul_correct {n m : Nat} {a b : SKI} (ha : IsChurch n a) (hb : IsChurch m b) :
+    IsChurch (
+  位置: Cslib/Languages/CombinatoryLogic/Recursion.lean L371-380
+  依赖定理(1): Cslib.SKI.zero_correct
+  外部premise(6):
+    - Cslib.SKI.Add   (via: exact Trans.trans (mul_def a b) (ha (SKI; exact add_correct m (n * m) b (Church n ; induction n with
+  | zero => simp_rw [Na; refine isChurch_trans (n * m) (a' := Chu)
+    - Cslib.SKI.Church   (via: exact add_correct m (n * m) b (Church n ; induction n with
+  | zero => simp_rw [Na; refine isChurch_trans (n * m) (a' := Chu; simp_rw [Nat.add_mul, Nat.one_mul, Nat.a; simp_rw [Nat.zero_mul, Church])
+    - Cslib.SKI.Zero   (via: exact Trans.trans (mul_def a b) (ha (SKI; exact add_correct m (n * m) b (Church n ; induction n with
+  | zero => simp_rw [Na; refine isChurch_trans (n * m) (a' := Chu)
+    - Cslib.SKI.add_correct   (via: exact add_correct m (n * m) b (Church n ; induction n with
+  | zero => simp_rw [Na)
+    - Cslib.SKI.isChurch_trans   (via: refine isChurch_trans (n * m) (a' := Chu)
+    - Cslib.SKI.mul_def   (via: exact Trans.trans (mul_def a b) (ha (SKI)
+  被依赖: (无)
+
+theorem Cslib.SKI.parallelReduction_diamond
+  陈述: theorem parallelReduction_diamond : Diamond ParallelReduction :=
+  位置: Cslib/Languages/CombinatoryLogic/Confluence.lean L142-205
+  依赖定理: (无)
+  外部premise(4):
+    - Cslib.SKI.I_irreducible   (via: case par c a₁' hc ha =>
+  rw [I_irreduci; case red_I =>
+  cases h₂
+  case refl => ; case red_I =>
+  rw [I_irreducible a' ha'; rw [I_irreducible a' ha']; rw [I_irreducible c hc])
+    - Cslib.SKI.Ka_irreducible   (via: case par a' c' ha hc =>
+  let ⟨a₁', h'⟩ ; case red_K =>
+  let ⟨a₂', ha₂'⟩ := Ka_ir; case red_K c =>
+  cases h₂
+  case refl =; let ⟨a₁', h'⟩ := Ka_irreducible a₁ a' ha; let ⟨a₂', ha₂'⟩ := Ka_irreducible a₂ a' )
+    - Cslib.SKI.ParallelReduction.par   (via: apply ParallelReduction.par; apply ParallelReduction.par <;>
+  apply ; case red_S a c =>
+  let ⟨a'', c', h⟩ := )
+    - Cslib.SKI.Sab_irreducible   (via: case red_S a c =>
+  let ⟨a'', c', h⟩ := ; let ⟨a'', c', h⟩ := Sab_irreducible a c ; let ⟨a', b', h⟩ := Sab_irreducible a b d)
+  被依赖: (无)
+
+theorem Cslib.SKI.rec_def
+  陈述: 
+  位置: Cslib/Languages/CombinatoryLogic/Recursion.lean L255-260
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.SKI.rfindAboveAux_step
+  陈述: 
+  位置: Cslib/Languages/CombinatoryLogic/Recursion.lean L299-304
+  依赖定理: (无)
+  外部premise(1):
+    - Cslib.SKI.isZero_correct   (via: apply isZero_correct _ _ hfa)
+  被依赖: (无)
+
+theorem Cslib.SKI.toChurch_correct
+  陈述: theorem toChurch_correct (n : ℕ) : IsChurch n (toChurch n) :=
+  位置: Cslib/Languages/CombinatoryLogic/Recursion.lean L141-144
+  依赖定理(1): Cslib.SKI.zero_correct
+  外部premise(2):
+    - Cslib.SKI.succ_correct   (via: exact succ_correct n (toChurch n) ih; induction n with
+| zero => exact zero_co)
+    - Cslib.SKI.toChurch   (via: exact succ_correct n (toChurch n) ih; induction n with
+| zero => exact zero_co)
+  被依赖: (无)
+
+theorem Cslib.SKI.unpaired_correct
+  陈述: theorem unpaired_correct (f x y : SKI) : (SKI.Unpaired ⬝ f ⬝ (MkPair ⬝ x ⬝ y)) ↠ f ⬝ x ⬝ y :=
+  位置: Cslib/Languages/CombinatoryLogic/Basic.lean L366-372
+  依赖定理: (无)
+  外部premise(6):
+    - Cslib.SKI.Fst   (via: trans f ⬝ (Fst ⬝ (MkPair ⬝ x ⬝ y)) ⬝ (Sn)
+    - Cslib.SKI.MkPair   (via: trans f ⬝ (Fst ⬝ (MkPair ⬝ x ⬝ y)) ⬝ (Sn)
+    - Cslib.SKI.Snd   (via: trans f ⬝ (Fst ⬝ (MkPair ⬝ x ⬝ y)) ⬝ (Sn)
+    - Cslib.SKI.fst_correct   (via: exact fst_correct _ _)
+    - Cslib.SKI.snd_correct   (via: exact snd_correct _ _)
+    - Cslib.SKI.unpaired_def   (via: exact unpaired_def f _)
+  被依赖: (无)
+
+theorem Cslib.URM.Program.Halts.of_toStandardForm
+  陈述: theorem Halts.of_toStandardForm {p : Program} {inputs : List ℕ}
+    (h : Halts p.toStandardForm inpu
+  位置: Cslib/Computability/URM/StandardForm.lean L189-193
+  依赖定理: (无)
+  外部premise(1):
+    - Cslib.URM.Steps.from_toStandardForm_halts   (via: obtain ⟨s₂, hsteps₂, hhalted₂, _⟩ := Ste)
+  被依赖: (无)
+
+theorem Cslib.URM.Program.toStandardForm_idempotent
+  陈述: theorem toStandardForm_idempotent (p : Program) :
+    p.toStandardForm.toStandardForm = p.toStandard
+  位置: Cslib/Computability/URM/StandardForm.lean L67-72
+  依赖定理: (无)
+  外部premise(1):
+    - Cslib.URM.Program.toStandardForm   (via: simp only [toStandardForm, List.length_m)
+  被依赖: (无)
+
+theorem Cslib.URM.Regs.State.Instr.JumpsBoundedBy.capJump
+  陈述: theorem JumpsBoundedBy.capJump (len : ℕ) (instr : Instr) :
+    (instr.capJump len).JumpsBoundedBy le
+  位置: Cslib/Computability/URM/Basic.lean L157-161
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.URM.Regs.State.Instr.T_nonJump
+  陈述: 
+  位置: Cslib/Computability/URM/Basic.lean L88-88
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.URM.Regs.State.Instr.capJump_S
+  陈述: 
+  位置: Cslib/Computability/URM/Basic.lean L147-147
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.URM.Step.Steps.HaltsWithResult.Halts.toHaltsWithResult
+  陈述: 
+  位置: Cslib/Computability/URM/Execution.lean L221-225
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.URM.Step.preserves_register
+  陈述: theorem preserves_register {s s' : State} {r : ℕ}
+    (hstep : Step p s s')
+    (hr : ∀ instr, p[s.p
+  位置: Cslib/Computability/URM/Execution.lean L96-105
+  依赖定理(1): Cslib.Language.IsRegular.zero
+  外部premise(4):
+    - Cslib.URM.Step.jump_eq   (via: cases hstep with
+| zero hinstr | succ hi)
+    - Cslib.URM.Step.jump_ne   (via: cases hstep with
+| zero hinstr | succ hi)
+    - Cslib.URM.Step.succ   (via: cases hstep with
+| zero hinstr | succ hi)
+    - Cslib.URM.Step.transfer   (via: cases hstep with
+| zero hinstr | succ hi)
+  被依赖: (无)
+
+theorem Cslib.goodSelection_exists
+  陈述: private lemma goodSelection_exists (ivs : InfVSet Vertex) :
+    ∃ S : Selection Vertex Color, GoodSe
+  位置: Cslib/Foundations/Combinatorics/InfiniteGraphRamsey.lean L65-76
+  依赖定理(2): Cslib.infinite_pigeonhole_principle, Cslib.ωSequence.Step.mk
+  外部premise(1):
+    - _private.Cslib.Foundations.Combinatorics.InfiniteGraphRamsey.0.Cslib.GoodSelection   (via: classical
+obtain ⟨v, h_v⟩ := Set.Infinit; grind [GoodSelection])
+  被依赖: (无)
+
+theorem Cslib.good_selections_exist
+  陈述: private lemma good_selections_exist :
+    ∃ vs : ℕ → Set Vertex, ∃ v : ℕ → Vertex, ∃ c : ℕ → Color,
+
+  位置: Cslib/Foundations/Combinatorics/InfiniteGraphRamsey.lean L106-120
+  依赖定理: (无)
+  外部premise(4):
+    - _private.Cslib.Foundations.Combinatorics.InfiniteGraphRamsey.0.Cslib.Selection.c   (via: use (fun k ↦ (goodSelection_seq color k))
+    - _private.Cslib.Foundations.Combinatorics.InfiniteGraphRamsey.0.Cslib.Selection.v   (via: use (fun k ↦ (goodSelection_seq color k))
+    - _private.Cslib.Foundations.Combinatorics.InfiniteGraphRamsey.0.Cslib.goodSelection_seq   (via: use (fun k ↦ (goodSelection_seq color k))
+    - _private.Cslib.Foundations.Combinatorics.InfiniteGraphRamsey.0.Cslib.goodSelection_seq_prop   (via: obtain ⟨ivs, h_ivs, h_eq⟩ := goodSelecti)
+  被依赖: (无)
+
+theorem Cslib.ωLanguage.IsRegular.not_da_buchi
+  陈述: theorem IsRegular.not_da_buchi :
+  ∃ (Symbol : Type) (p : ωLanguage Symbol), p.IsRegular ∧
+    ¬ ∃ (
+  位置: Cslib/Computability/Languages/OmegaRegularLanguage.lean L61-69
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.ωLanguage.IsRegular.top
+  陈述: theorem IsRegular.top : (⊤ : ωLanguage Symbol).IsRegular :=
+  位置: Cslib/Computability/Languages/OmegaRegularLanguage.lean L93-104
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.ωLanguage.append_mem_hmul
+  陈述: 
+  位置: Cslib/Computability/Languages/OmegaLanguage.lean L247-248
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.ωLanguage.hmul_omegaPow_le_omegaPow
+  陈述: theorem hmul_omegaPow_le_omegaPow [Inhabited α] (l : Language α) : l * l^ω ≤ l^ω :=
+  位置: Cslib/Computability/Languages/OmegaLanguage.lean L413-418
+  依赖定理(1): Cslib.ωLanguage.omegaPow_coind
+  外部premise(3):
+    - Cslib.ωLanguage.le_hmul_congr   (via: refine le_hmul_congr ?_ ?_)
+    - Cslib.ωLanguage.mul_hmul   (via: rw [← mul_hmul, Language.sub_one_mul, ← )
+    - Cslib.ωLanguage.omegaPow_le_hmul_omegaPow'   (via: apply omegaPow_le_hmul_omegaPow')
+  被依赖: (无)
+
+theorem Cslib.ωLanguage.omegaPow_le_kstar_omegaPow
+  陈述: theorem omegaPow_le_kstar_omegaPow [Inhabited α] (l : Language α) : l^ω ≤ (l∗)^ω :=
+  位置: Cslib/Computability/Languages/OmegaLanguage.lean L426-427
+  依赖定理: (无)
+  外部premise(1):
+    - Cslib.ωLanguage.le_omegaPow_congr   (via: simp [le_omegaPow_congr])
+  被依赖: (无)
+
+theorem Cslib.ωLanguage.omegaPow_of_le_one
+  陈述: theorem omegaPow_of_le_one [Inhabited α] (h : l ≤ 1) : l^ω = ⊥ :=
+  位置: Cslib/Computability/Languages/OmegaLanguage.lean L331-332
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.ωLanguage.sup_def
+  陈述: 
+  位置: Cslib/Computability/Languages/OmegaLanguage.lean L115-115
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.ωLanguage.toSet_ofSet
+  陈述: 
+  位置: Cslib/Computability/Languages/OmegaLanguage.lean L91-91
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.ωLanguage.zero_hmul
+  陈述: theorem zero_hmul : (0 : Language α) * p = ⊥ :=
+  位置: Cslib/Computability/Languages/OmegaLanguage.lean L269-271
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.ωSequence.append_extract_extract
+  陈述: theorem append_extract_extract {xs : ωSequence α} {k m n : ℕ} (h_km : k ≤ m) (h_mn : m ≤ n) :
+    (x
+  位置: Cslib/Foundations/Data/OmegaSequence/Init.lean L484-487
+  依赖定理: (无)
+  外部premise(2):
+    - Cslib.ωSequence.extract_eq_drop_take   (via: grind [extract_eq_drop_take, take_add])
+    - Cslib.ωSequence.take_add   (via: grind [extract_eq_drop_take, take_add])
+  被依赖: (无)
+
+theorem Cslib.ωSequence.append_right_inj
+  陈述: 
+  位置: Cslib/Foundations/Data/OmegaSequence/Init.lean L281-283
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.ωSequence.append_take_drop
+  陈述: theorem append_take_drop (n : ℕ) (s : ωSequence α) : appendωSequence (take n s) (drop n s) = s :=
+  位置: Cslib/Foundations/Data/OmegaSequence/Init.lean L364-367
+  依赖定理: (无)
+  外部premise(4):
+    - Cslib.ωSequence.cons_append_ωSequence   (via: induction n generalizing s with
+| zero =; rw [take_succ, drop_succ, cons_append_ωS)
+    - Cslib.ωSequence.drop_succ   (via: induction n generalizing s with
+| zero =; rw [take_succ, drop_succ, cons_append_ωS)
+    - Cslib.ωSequence.eta   (via: induction n generalizing s with
+| zero =; rw [take_succ, drop_succ, cons_append_ωS)
+    - Cslib.ωSequence.take_succ   (via: induction n generalizing s with
+| zero =; rw [take_succ, drop_succ, cons_append_ωS)
+  被依赖: (无)
+
+theorem Cslib.ωSequence.concat_take_get
+  陈述: 
+  位置: Cslib/Foundations/Data/OmegaSequence/Init.lean L344-345
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.ωSequence.const_eq
+  陈述: theorem const_eq (a : α) : const a = a ::ω const a :=
+  位置: Cslib/Foundations/Data/OmegaSequence/Init.lean L183-185
+  依赖定理: (无)
+  外部premise(1):
+    - Cslib.ωSequence.ext   (via: apply ωSequence.ext)
+  被依赖: (无)
+
+theorem Cslib.ωSequence.cumLen_segment_one_add
+  陈述: theorem cumLen_segment_one_add {ls : ωSequence (List α)} (h_ls : ∀ k, (ls k).length > 0)
+    (n : ℕ)
+  位置: Cslib/Foundations/Data/OmegaSequence/Flatten.lean L66-97
+  依赖定理: (无)
+  外部premise(3):
+    - Cslib.ωSequence.cumLen   (via: have h0 : (ls.drop 1).cumLen 0 = 0 := by)
+    - Cslib.ωSequence.cumLen_one_add_drop   (via: grind [cumLen_one_add_drop]; have := cumLen_one_add_drop ls (i - 1); refine ⟨?_, 1 + i, ?_⟩ <;> grind [cumLen; suffices h : i = 1 + (i - 1) by grind [c)
+    - Cslib.ωSequence.cumLen_zero   (via: have h0 : (ls.drop 1).cumLen 0 = 0 := by; simp [cumLen_zero])
+  被依赖: (无)
+
+theorem Cslib.ωSequence.cumLen_strictMono
+  陈述: theorem cumLen_strictMono {ls : ωSequence (List α)} (h_ls : ∀ k, (ls k).length > 0) :
+    StrictMono
+  位置: Cslib/Foundations/Data/OmegaSequence/Flatten.lean L55-57
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.ωSequence.drop_append_of_ge_length
+  陈述: theorem drop_append_of_ge_length {xl : List α} {xs : ωSequence α} {n : ℕ} (h : xl.length ≤ n) :
+    
+  位置: Cslib/Foundations/Data/OmegaSequence/Init.lean L408-411
+  依赖定理(1): Cslib.ωSequence.get_append_right'
+  外部premise(1):
+    - Cslib.ωSequence.get_drop   (via: simp (disch := omega) only [get_drop, ge)
+  被依赖: (无)
+
+theorem Cslib.ωSequence.drop_append_ωSequence
+  陈述: 
+  位置: Cslib/Foundations/Data/OmegaSequence/Init.lean L302-305
+  依赖定理(1): Turing.StackTape.tail_cons
+  外部premise(2):
+    - Cslib.ωSequence.cons_append_ωSequence   (via: rw [List.length_cons, drop_succ, cons_ap)
+    - Cslib.ωSequence.drop_succ   (via: rw [List.length_cons, drop_succ, cons_ap)
+  被依赖: (无)
+
+theorem Cslib.ωSequence.drop_map
+  陈述: 
+  位置: Cslib/Foundations/Data/OmegaSequence/Init.lean L123-124
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.ωSequence.get_succ
+  陈述: 
+  位置: Cslib/Foundations/Data/OmegaSequence/Init.lean L87-88
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.ωSequence.get_tail
+  陈述: 
+  位置: Cslib/Foundations/Data/OmegaSequence/Init.lean L76-76
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.ωSequence.get_zero_cons
+  陈述: 
+  位置: Cslib/Foundations/Data/OmegaSequence/Init.lean L52-53
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.ωSequence.head_map
+  陈述: 
+  位置: Cslib/Foundations/Data/OmegaSequence/Init.lean L133-134
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.ωSequence.map_const
+  陈述: 
+  位置: Cslib/Foundations/Data/OmegaSequence/Init.lean L193-194
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.ωSequence.tail_map
+  陈述: 
+  位置: Cslib/Foundations/Data/OmegaSequence/Init.lean L130-130
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.ωSequence.take_drop
+  陈述: lemma take_drop : (a.drop m).take n = (a.take (m + n)).drop m :=
+  位置: Cslib/Foundations/Data/OmegaSequence/Init.lean L396-397
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.ωSequence.take_theorem
+  陈述: theorem take_theorem (s₁ s₂ : ωSequence α) (h : ∀ n : ℕ, take n s₁ = take n s₂) : s₁ = s₂ :=
+  位置: Cslib/Foundations/Data/OmegaSequence/Init.lean L415-422
+  依赖定理: (无)
+  外部premise(1):
+    - Cslib.ωSequence.getElem?_take_succ   (via: have h₁ : some (s₁ (succ n)) = some (s₂ ; induction n with
+| zero => simpa [take] ; rw [← getElem?_take_succ, ← getElem?_tak)
+  被依赖: (无)
+
+theorem Cslib.ωSequence.zip_eq
+  陈述: theorem zip_eq (s₁ : ωSequence α) (s₂ : ωSequence β) :
+    zip f s₁ s₂ = f (head s₁) (head s₂) ::ω z
+  位置: Cslib/Foundations/Data/OmegaSequence/Init.lean L177-179
+  依赖定理: (无)
+  外部premise(1):
+    - Cslib.ωSequence.eta   (via: rw [← ωSequence.eta (zip f s₁ s₂)])
+  被依赖: (无)
+
+theorem Language.mem_biInf
+  陈述: 
+  位置: Cslib/Computability/Languages/Language.lean L29-31
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Language.mul_sub_one
+  陈述: theorem mul_sub_one : l * (l - 1) = l * l - 1 :=
+  位置: Cslib/Computability/Languages/Language.lean L71-76
+  依赖定理: (无)
+  外部premise(2):
+    - Language.reverse_sub   (via: calc
+  _ = (l * (l - 1)).reverse.reverse; rw [reverse_mul, reverse_sub, reverse_on; rw [reverse_sub, reverse_one, reverse_mu)
+    - Language.sub_one_mul   (via: calc
+  _ = (l * (l - 1)).reverse.reverse; rw [sub_one_mul])
+  被依赖: (无)
+
+theorem Nat.count_notMem_range_pos
+  陈述: theorem count_notMem_range_pos (h0 : f 0 = 0) (n : ℕ) (hn : n ∉ range f) :
+    count (· ∈ range f) n
+  位置: Cslib/Foundations/Data/Nat/Segment.lean L73-76
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Nat.infinite_strictMono
+  陈述: 
+  位置: Cslib/Foundations/Data/Nat/Segment.lean L42-44
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Nat.nth_succ_gap
+  陈述: theorem nth_succ_gap {p : ℕ → Prop} (hf : (setOf p).Infinite) (n : ℕ) :
+    ∀ k < nth p (n + 1) - nt
+  位置: Cslib/Foundations/Data/Nat/Segment.lean L48-56
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Nat.segment_upper_bound'
+  陈述: theorem segment_upper_bound' (hm : StrictMono f) {k : ℕ} (h : f 0 ≤ k) :
+    k < f (segment f k + 1)
+  位置: Cslib/Foundations/Data/Nat/Segment.lean L242-246
+  依赖定理(1): Nat.base_zero_strictMono
+  外部premise(3):
+    - Nat.segment'_eq_segment   (via: rw [← segment'_eq_segment hm, segment'])
+    - Nat.segment_upper_bound   (via: have := segment_upper_bound (base_zero_s)
+    - _private.Cslib.Foundations.Data.Nat.Segment.0.Nat.base_zero_shift   (via: have := segment_upper_bound (base_zero_s)
+  被依赖: (无)
+
+theorem Relation.ReflTransGen.to_eqvGen
+  陈述: theorem ReflTransGen.to_eqvGen (h : ReflTransGen r a b) : EqvGen r a b :=
+  位置: Cslib/Foundations/Data/Relation.lean L48-49
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Relation.RelatesInSteps.head
+  陈述: theorem RelatesInSteps.head (t t' t'' : α) (n : ℕ) (h₁ : r t t')
+    (h₂ : RelatesInSteps r t' t'' n
+  位置: Cslib/Foundations/Data/RelatesInSteps.lean L50-56
+  依赖定理(1): Cslib.LTS.STr.single
+  外部premise(2):
+    - Relation.RelatesInSteps.refl   (via: induction h₂ with
+| refl =>
+  exact sing)
+    - Relation.RelatesInSteps.tail   (via: exact tail _ _ _ (n + 1) hac hcd; induction h₂ with
+| refl =>
+  exact sing)
+  被依赖: (无)
+
+theorem Relation.RelatesInSteps.head_induction_on
+  陈述: theorem RelatesInSteps.head_induction_on {motive : ∀ (a : α) (n : ℕ), RelatesInSteps r a b n → Prop}
+  位置: Cslib/Foundations/Data/RelatesInSteps.lean L59-69
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Relation.RelatesInSteps.succ'
+  陈述: lemma RelatesInSteps.succ' {a b : α} : ∀ {n : ℕ}, RelatesInSteps r a b (n + 1) →
+    ∃ t', r a t' ∧ 
+  位置: Cslib/Foundations/Data/RelatesInSteps.lean L103-114
+  依赖定理(1): Relation.RelatesWithinSteps.zero_iff
+  外部premise(1):
+    - Relation.RelatesInSteps.succ   (via: obtain ⟨t', hsteps, hstep⟩ := succ h)
+  被依赖: (无)
+
+theorem Relation.RelatesWithinSteps.of_le
+  陈述: lemma RelatesWithinSteps.of_le {a b : α} {n₁ n₂ : ℕ}
+    (h : RelatesWithinSteps r a b n₁) (hn : n₁ 
+  位置: Cslib/Foundations/Data/RelatesInSteps.lean L194-198
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Relation.RelatesWithinSteps.trans
+  陈述: @[trans]
+lemma RelatesWithinSteps.trans {a b c : α} {n₁ n₂ : ℕ}
+    (h₁ : RelatesWithinSteps r a b n
+  位置: Cslib/Foundations/Data/RelatesInSteps.lean L182-192
+  依赖定理(1): Relation.RelatesWithinSteps.trans
+  外部premise: (无)
+  被依赖: Relation.RelatesWithinSteps.trans
+
+theorem Relation.RightEuclidean.LeftEuclidean.Confluent.equivalence_join_reflTransGen
+  陈述: theorem Confluent.equivalence_join_reflTransGen (h : Confluent r) :
+    Equivalence (Join (ReflTrans
+  位置: Cslib/Foundations/Data/Relation.lean L312-315
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Relation.RightEuclidean.LeftEuclidean.Convergent.isConfluent
+  陈述: 
+  位置: Cslib/Foundations/Data/Relation.lean L431-431
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Relation.RightEuclidean.LeftEuclidean.Diamond.toConfluent
+  陈述: theorem Diamond.toConfluent (h : Diamond r) : Confluent r :=
+  位置: Cslib/Foundations/Data/Relation.lean L201-208
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Relation.RightEuclidean.LeftEuclidean.ReflGen.compRel_symm
+  陈述: 
+  位置: Cslib/Foundations/Data/Relation.lean L565-568
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Relation.RightEuclidean.LeftEuclidean.RightEuclidean.symm_leftEuclidean
+  陈述: 
+  位置: Cslib/Foundations/Data/Relation.lean L144-145
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Relation.RightEuclidean.LeftEuclidean.SN.of_rel
+  陈述: 
+  位置: Cslib/Foundations/Data/Relation.lean L325-325
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Relation.RightEuclidean.LeftEuclidean.StronglyCommute.extend
+  陈述: theorem StronglyCommute.extend (h : StronglyCommute r₁ r₂) (xy : ReflTransGen r₁ x y)
+    (xz : r₂ x
+  位置: Cslib/Foundations/Data/Relation.lean L494-502
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Relation.RightEuclidean.LeftEuclidean.StronglyCommute.toStronglyConfluent
+  陈述: 
+  位置: Cslib/Foundations/Data/Relation.lean L486-486
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Relation.RightEuclidean.LeftEuclidean.Terminating.isConfluent_iff_all_unique_Normal
+  陈述: theorem Terminating.isConfluent_iff_all_unique_Normal (ht : Terminating r) :
+    Confluent r ↔ ∀ a :
+  位置: Cslib/Foundations/Data/Relation.lean L403-424
+  依赖定理: (无)
+  外部premise(2):
+    - Relation.Normal.reflTransGen_eq   (via: rw [Normal.reflTransGen_eq hn₁ h₁, Norma)
+    - Relation.Normalizing   (via: have hn : Normalizing r := ht.isNormaliz)
+  被依赖: (无)
+
+theorem Relation.RightEuclidean.LeftEuclidean.Terminating.isNormalizing
+  陈述: 
+  位置: Cslib/Foundations/Data/Relation.lean L400-401
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Relation.RightEuclidean.LeftEuclidean.antisymm_leftUnique
+  陈述: theorem antisymm_leftUnique [Std.Antisymm r] : Relator.LeftUnique r :=
+  位置: Cslib/Foundations/Data/Relation.lean L131-133
+  依赖定理: (无)
+  外部premise(1):
+    - Relation.LeftEuclidean.leftEuclidean   (via: exact antisymm (leftEuclidean ac bc) (le)
+  被依赖: (无)
+
+theorem Relation.RightEuclidean.LeftEuclidean.join_inl
+  陈述: 
+  位置: Cslib/Foundations/Data/Relation.lean L519-520
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Relation.RightEuclidean.LeftEuclidean.symm_rightEuclidean_iff_trans
+  陈述: 
+  位置: Cslib/Foundations/Data/Relation.lean L170-171
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Relation.RightEuclidean.antisymm_rightUnique
+  陈述: theorem antisymm_rightUnique [Std.Antisymm r] : Relator.RightUnique r :=
+  位置: Cslib/Foundations/Data/Relation.lean L101-103
+  依赖定理: (无)
+  外部premise(1):
+    - Relation.RightEuclidean.rightEuclidean   (via: exact antisymm (rightEuclidean ab ac) (r)
+  被依赖: (无)
+
+theorem Relation.SymmGen.to_eqvGen
+  陈述: theorem SymmGen.to_eqvGen (h : SymmGen r a b) : EqvGen r a b :=
+  位置: Cslib/Foundations/Data/Relation.lean L51-52
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Set.saturates_compl
+  陈述: theorem saturates_compl (hs : Saturates f s) : Saturates f sᶜ :=
+  位置: Cslib/Foundations/Data/Set/Saturation.lean L32-35
+  依赖定理: (无)
+  外部premise(1):
+    - Set.Saturates   (via: grind [Saturates])
+  被依赖: (无)
+
+theorem Turing.BiTape.moveLeft_moveRight
+  陈述: @[simp]
+lemma moveLeft_moveRight (t : BiTape Symbol) : t.moveLeft.moveRight = t :=
+  位置: Cslib/Foundations/Data/BiTape.lean L109-111
+  依赖定理: (无)
+  外部premise(2):
+    - Turing.BiTape.moveLeft   (via: simp [moveRight, moveLeft])
+    - Turing.BiTape.moveRight   (via: simp [moveRight, moveLeft])
+  被依赖: (无)
+
+theorem Turing.BiTape.spaceUsed_mk₁
+  陈述: lemma spaceUsed_mk₁ (l : List Symbol) :
+    (mk₁ l).spaceUsed = max 1 l.length :=
+  位置: Cslib/Foundations/Data/BiTape.lean L135-139
+  依赖定理: (无)
+  外部premise(3):
+    - Turing.BiTape.mk₁   (via: cases l with
+| nil => simp [mk₁, spaceUs; simp [mk₁, spaceUsed, StackTape.length_n; simp [mk₁, spaceUsed, nil, StackTape.len)
+    - Turing.BiTape.nil   (via: cases l with
+| nil => simp [mk₁, spaceUs; simp [mk₁, spaceUsed, nil, StackTape.len)
+    - Turing.BiTape.spaceUsed   (via: cases l with
+| nil => simp [mk₁, spaceUs; simp [mk₁, spaceUsed, StackTape.length_n; simp [mk₁, spaceUsed, nil, StackTape.len)
+  被依赖: (无)
+
+theorem Turing.SingleTapeTM.SingleTapeTM.Cfg.spaceUsed_haltCfg
+  陈述: 
+  位置: Cslib/Computability/Machines/SingleTapeTuring/Basic.lean L169-171
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Turing.SingleTapeTM.SingleTapeTM.Cfg.spaceUsed_initCfg
+  陈述: 
+  位置: Cslib/Computability/Machines/SingleTapeTuring/Basic.lean L165-167
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Turing.SingleTapeTM.SingleTapeTM.map_toCompCfg_left_step
+  陈述: theorem map_toCompCfg_left_step (hcfg1 : cfg1.state.isSome) :
+    Option.map (toCompCfg_left tm1 tm2
+  位置: Cslib/Computability/Machines/SingleTapeTuring/Basic.lean L300-311
+  依赖定理(1): Cslib.ωSequence.Step.mk
+  外部premise(3):
+    - Turing.SingleTapeTM.compComputer   (via: cases cfg1 with | mk state BiTape => cas; cases state with
+| none => grind
+| some ; simp only [step, toCompCfg_left, compCom)
+    - Turing.SingleTapeTM.step   (via: cases cfg1 with | mk state BiTape => cas; cases state with
+| none => grind
+| some ; simp only [step, toCompCfg_left, compCom)
+    - _private.Cslib.Computability.Machines.SingleTapeTuring.Basic.0.Turing.SingleTapeTM.toCompCfg_left   (via: cases cfg1 with | mk state BiTape => cas; cases state with
+| none => grind
+| some ; simp only [step, toCompCfg_left, compCom)
+  被依赖: (无)
+
+theorem Turing.StackTape.cons_some_toList
+  陈述: @[simp, scoped grind =]
+lemma cons_some_toList (a : Symbol) (l : StackTape Symbol) :
+    (cons (some
+  位置: Cslib/Foundations/Data/StackTape.lean L91-93
+  依赖定理: (无)
+  外部premise(1):
+    - Turing.StackTape.cons   (via: simp only [cons])
+  被依赖: (无)
+
+theorem Turing.StackTape.head_cons
+  陈述: @[simp]
+lemma head_cons (o : Option Symbol) (l : StackTape Symbol) : (cons o l).head = o :=
+  位置: Cslib/Foundations/Data/StackTape.lean L118-124
+  依赖定理(1): Cslib.ωSequence.Step.mk
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Turing.StackTape.length_nil
+  陈述: @[simp, scoped grind =]
+lemma length_nil : (nil : StackTape Symbol).length = 0 :=
+  位置: Cslib/Foundations/Data/StackTape.lean L174-175
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: (无)
+
+theorem Cslib.Automata.NA.Buchi.inter_freq_comp_acc_freq_acc
+  陈述: lemma inter_freq_comp_acc_freq_acc {xs : ωSequence Symbol} {ss : ωSequence ((Π i, State i) × Bool)}
+
+  位置: Cslib/Computability/Automata/NA/BuchiInter.lean L79-94
+  依赖定理: (无)
+  外部premise(1):
+    - Cslib.Automata.NA.Buchi.interAcc   (via: have (b : Bool) : interAcc b acc = {⟨_, )
+  被依赖: Cslib.Automata.NA.Buchi.inter_language_eq
+
+theorem Cslib.Automata.NA.loop_fin_run_mtr
+  陈述: theorem loop_fin_run_mtr {xl : List Symbol} (h : xl ∈ language na) :
+    na.loop.MTr (inl ()) xl (in
+  位置: Cslib/Computability/Automata/NA/Loop.lean L115-120
+  依赖定理: (无)
+  外部premise(1):
+    - Cslib.Automata.NA.loop_fin_run_exists   (via: obtain ⟨sl, _, _, _, h_run⟩ := loop_fin_)
+  被依赖: Cslib.Automata.NA.loop_run_exists
+
+theorem Cslib.Automata.NA.loop_run_left_right
+  陈述: lemma loop_run_left_right {xs : ωSequence Symbol} {ss : ωSequence (Unit ⊕ State)}
+    (h : na.loop.R
+  位置: Cslib/Computability/Automata/NA/Loop.lean L47-61
+  依赖定理: (无)
+  外部premise(1):
+    - Cslib.Automata.NA.FinAcc.loop   (via: case succ m h_ind =>
+  obtain ⟨s, t, h_m; case zero =>
+  obtain ⟨t, _⟩ := isRight_; grind [FinAcc.loop, h.start, h.trans 0]; grind [FinAcc.loop, h.trans (m + 1)]; have h_tr : na.Tr t (xs (m + 1)) t' := b; obtain ⟨s, _⟩ : ∃ s, na.Tr s (xs 0) t ∧ )
+  被依赖: Cslib.Automata.NA.loop_run_left_right_left
+
+theorem Cslib.LTS.noε_saturate_mTr
+  陈述: @[scoped grind =]
+lemma LTS.noε_saturate_mTr {lts : LTS State (Option Label)} :
+  lts.saturate.MTr s
+  位置: Cslib/Computability/Automata/EpsilonNA/ToNA.lean L29-33
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: Cslib.Automata.εNA.FinAcc.toNAFinAcc_language_eq
+
+theorem Cslib.Crypto.Protocols.PerfectSecrecy.jointDist_tsum_fst
+  陈述: 
+  位置: Cslib/Crypto/Protocols/PerfectSecrecy/Internal/PerfectSecrecy.lean L38-40
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: Cslib.Crypto.Protocols.PerfectSecrecy.perfectlySecret_iff_indep
+
+theorem Cslib.FreeM.FreeState.FreeWriter.FreeCont.run_liftBind_callCC
+  陈述: 
+  位置: Cslib/Foundations/Control/Monad/Free/Effects.lean L357-360
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: Cslib.FreeM.FreeState.FreeWriter.FreeCont.run_callCC
+
+theorem Cslib.FreeM.FreeState.FreeWriter.FreeCont.FreeReader.run_pure
+  陈述: 
+  位置: Cslib/Foundations/Control/Monad/Free/Effects.lean L434-436
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: Cslib.FreeM.FreeState.FreeWriter.run_toWriterT
+
+theorem Cslib.LambdaCalculus.LocallyNameless.Fsub.Sub.weaken
+  陈述: lemma weaken (sub : Sub (Γ ++ Θ) σ σ') (wf : (Γ ++ Δ ++ Θ).Wf) : Sub (Γ ++ Δ ++ Θ) σ σ' :=
+  位置: Cslib/Languages/LambdaCalculus/LocallyNameless/Fsub/Subtype.lean L67-74
+  依赖定理: (无)
+  外部premise(1):
+    - Cslib.LambdaCalculus.LocallyNameless.Fsub.Sub.all   (via: apply all (free_union [Context.dom] Var); case all =>
+  subst eq
+  apply all (free)
+  被依赖: Cslib.LambdaCalculus.LocallyNameless.Fsub.Sub.narrow_aux
+
+theorem Cslib.LambdaCalculus.LocallyNameless.Fsub.Typing.wf
+  陈述: @[grind →]
+lemma wf {Γ : Env Var} {t : Term Var} {τ : Ty Var} (der : Typing Γ t τ) : Γ.Wf ∧ t.LC ∧ τ
+  位置: Cslib/Languages/LambdaCalculus/LocallyNameless/Fsub/Typing.lean L65-77
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: Cslib.LambdaCalculus.LocallyNameless.Fsub.Sub.narrow_aux
+
+theorem Cslib.LambdaCalculus.LocallyNameless.Fsub.Ty.openRec_subst
+  陈述: lemma openRec_subst (Y : ℕ) (σ τ : Ty Var) (lc : δ.LC) (X : Var) :
+    (σ⟦Y ↝ τ⟧ᵞ)[X := δ] = σ[X := 
+  位置: Cslib/Languages/LambdaCalculus/LocallyNameless/Fsub/Opening.lean L102-105
+  依赖定理: (无)
+  外部premise(1):
+    - Cslib.LambdaCalculus.LocallyNameless.Fsub.Ty.openRec_lc   (via: induction σ generalizing Y <;> grind [op)
+  被依赖: Cslib.LambdaCalculus.LocallyNameless.Fsub.Ty.Term.openRecTy_substTy
+
+theorem Cslib.LambdaCalculus.LocallyNameless.Fsub.Ty.Wf.open_lc
+  陈述: lemma open_lc (ok_Γ : Γ✓) (wf_all : (Ty.all σ τ).Wf Γ) (wf_δ : δ.Wf Γ) : (τ ^ᵞ δ).Wf Γ :=
+  位置: Cslib/Languages/LambdaCalculus/LocallyNameless/Fsub/WellFormed.lean L132-137
+  依赖定理(1): Cslib.LambdaCalculus.LocallyNameless.Fsub.Sub.map_subst
+  外部premise: (无)
+  被依赖: Cslib.LambdaCalculus.LocallyNameless.Untyped.Term.open_eq_app
+
+theorem Cslib.Logic.CLL.PhaseSpace.Fact.par_of_tensor
+  陈述: lemma par_of_tensor {G H : Fact P} : (G ⅋ H) = (Gᗮ ⊗ Hᗮ)ᗮ :=
+  位置: Cslib/Logics/LinearLogic/CLL/PhaseSemantics/Basic.lean L451-452
+  依赖定理: (无)
+  外部premise(1):
+    - Cslib.Logic.CLL.PhaseSpace.Fact.tensor_of_par   (via: simp [tensor_of_par])
+  被依赖: Cslib.Logic.CLL.PhaseSpace.Fact.linImpl_par
+
+theorem Cslib.Logic.CLL.PhaseSpace.orthogonal_def
+  陈述: 
+  位置: Cslib/Logics/LinearLogic/CLL/PhaseSemantics/Basic.lean L94-94
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: Cslib.Logic.CLL.PhaseSpace.inter_eq_orth_union_orth
+
+theorem Cslib.SKI.zero_correct
+  陈述: theorem zero_correct : IsChurch 0 SKI.Zero :=
+  位置: Cslib/Languages/CombinatoryLogic/Recursion.lean L103-108
+  依赖定理: (无)
+  外部premise(3):
+    - Cslib.SKI.Church   (via: unfold IsChurch SKI.Zero Church)
+    - Cslib.SKI.IsChurch   (via: unfold IsChurch SKI.Zero Church)
+    - Cslib.SKI.Zero   (via: unfold IsChurch SKI.Zero Church)
+  被依赖: Cslib.SKI.mul_correct, Cslib.SKI.toChurch_correct
+
+theorem Cslib.infinite_pigeonhole_principle
+  陈述: theorem infinite_pigeonhole_principle {X Y : Type*} [Finite Y] (f : X → Y) {s : Set X}
+    (h_inf : 
+  位置: Cslib/Foundations/Combinatorics/InfiniteGraphRamsey.lean L29-38
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: Cslib.goodSelection_exists
+
+theorem Cslib.ωLanguage.omegaPow_coind
+  陈述: theorem omegaPow_coind [Inhabited α] (h_le : p ≤ (l - 1) * p) : p ≤ l^ω :=
+  位置: Cslib/Computability/Languages/OmegaLanguage.lean L393-396
+  依赖定理: (无)
+  外部premise(2):
+    - Cslib.ωLanguage.omegaPow_coind'   (via: refine omegaPow_coind' ?_ h_le)
+    - Cslib.ωLanguage.omegaPow_of_sub_one   (via: rw [← omegaPow_of_sub_one])
+  被依赖: Cslib.ωLanguage.hmul_omegaPow_le_omegaPow
+
+theorem Cslib.ωSequence.get_append_right'
+  陈述: theorem get_append_right' {xl : List α} {xs : ωSequence α} {k : ℕ} (h : xl.length ≤ k) :
+    (xl ++ω
+  位置: Cslib/Foundations/Data/OmegaSequence/Init.lean L270-273
+  依赖定理: (无)
+  外部premise(1):
+    - Cslib.ωSequence.get_append_right   (via: apply get_append_right)
+  被依赖: Cslib.ωSequence.drop_append_of_ge_length
+
+theorem Turing.StackTape.tail_cons
+  陈述: @[simp]
+lemma tail_cons (o : Option Symbol) (l : StackTape Symbol) : (cons o l).tail = l :=
+  位置: Cslib/Foundations/Data/StackTape.lean L126-133
+  依赖定理(1): Cslib.ωSequence.Step.mk
+  外部premise(2):
+    - Turing.StackTape.cons   (via: cases o with
+| none =>
+  cases l with | ; simp only [cons, tail])
+    - Turing.StackTape.tail   (via: cases o with
+| none =>
+  cases l with | ; simp only [cons, tail])
+  被依赖: Cslib.ωSequence.drop_append_ωSequence
+
+theorem Nat.base_zero_strictMono
+  陈述: theorem base_zero_strictMono (hm : StrictMono f) :
+    StrictMono (f · - f 0) :=
+  位置: Cslib/Foundations/Data/Nat/Segment.lean L202-208
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: Nat.segment_upper_bound'
+
+theorem Cslib.LTS.STr.single
+  陈述: theorem STr.single [HasTau Label] (lts : LTS State Label) :
+    lts.Tr s μ s' → lts.STr s μ s' :=
+  位置: Cslib/Foundations/Semantics/LTS/HasTau.lean L47-50
+  依赖定理: (无)
+  外部premise(1):
+    - Cslib.LTS.STr.tr   (via: apply STr.tr .refl h .refl)
+  被依赖: Relation.RelatesInSteps.head
+
+theorem Relation.RelatesWithinSteps.zero_iff
+  陈述: @[simp]
+lemma RelatesWithinSteps.zero_iff {a b : α} : RelatesWithinSteps r a b 0 ↔ a = b :=
+  位置: Cslib/Foundations/Data/RelatesInSteps.lean L174-180
+  依赖定理(1): Cslib.Language.IsRegular.zero
+  外部premise(1):
+    - Relation.RelatesWithinSteps.refl   (via: exact RelatesWithinSteps.refl a)
+  被依赖: Relation.RelatesInSteps.succ'
+
+theorem Cslib.LambdaCalculus.LocallyNameless.Fsub.Sub.map_subst
+  陈述: lemma map_subst (sub₁ : Sub (Γ ++ ⟨X, Binding.sub δ'⟩ :: Δ) σ τ) (sub₂ : Sub Δ δ δ') :
+    Sub (Γ.ma
+  位置: Cslib/Languages/LambdaCalculus/LocallyNameless/Fsub/Subtype.lean L145-160
+  依赖定理(1): Cslib.LambdaCalculus.LocallyNameless.Fsub.Ty.Wf.weaken_head
+  外部premise(2):
+    - Cslib.LambdaCalculus.LocallyNameless.Fsub.Sub.all   (via: apply Sub.all (free_union Var) <;> grind; case all => apply Sub.all (free_union Va)
+    - Cslib.LambdaCalculus.LocallyNameless.Fsub.Sub.refl   (via: all_goals
+  grind [Env.Wf.to_ok, Sub.ref; grind [Env.Wf.to_ok, Sub.refl, Env.Wf.ma)
+  被依赖: Cslib.LambdaCalculus.LocallyNameless.Fsub.Ty.Wf.open_lc
+
+theorem Cslib.ωSequence.Step.mk
+  陈述: 
+  位置: Cslib/Foundations/Data/OmegaSequence/Temporal.lean L30-31
+  依赖定理: (无)
+  外部premise: (无)
+  被依赖: Cslib.goodSelection_exists, Turing.SingleTapeTM.SingleTapeTM.map_toCompCfg_left_step, Turing.StackTape.head_cons, Turing.StackTape.tail_cons
+
+theorem Cslib.Language.IsRegular.zero
+  陈述: theorem IsRegular.zero : (0 : Language Symbol).IsRegular :=
+  位置: Cslib/Computability/Languages/RegularLanguage.lean L72-80
+  依赖定理: (无)
+  外部premise(1):
+    - Cslib.Language.IsRegular.iff_dfa   (via: rw [IsRegular.iff_dfa])
+  被依赖: Cslib.URM.Step.preserves_register, Relation.RelatesWithinSteps.zero_iff
+
+theorem Cslib.LambdaCalculus.LocallyNameless.Fsub.Ty.Wf.weaken_head
+  陈述: theorem weaken_head (wf : σ.Wf Δ) (ok : (Γ ++ Δ)✓) : σ.Wf (Γ ++ Δ) :=
+  位置: Cslib/Languages/LambdaCalculus/LocallyNameless/Fsub/WellFormed.lean L88-90
+  依赖定理(1): Cslib.LambdaCalculus.LocallyNameless.Fsub.Ty.Wf.weaken
+  外部premise: (无)
+  被依赖: Cslib.LambdaCalculus.LocallyNameless.Fsub.Sub.map_subst
+
+theorem Cslib.LambdaCalculus.LocallyNameless.Fsub.Ty.Wf.weaken
+  陈述: theorem weaken (wf_ΓΘ : σ.Wf (Γ ++ Θ)) (ok_ΓΔΘ : (Γ ++ Δ ++ Θ)✓) : σ.Wf (Γ ++ Δ ++ Θ) :=
+  位置: Cslib/Languages/LambdaCalculus/LocallyNameless/Fsub/WellFormed.lean L81-85
+  依赖定理: (无)
+  外部premise(1):
+    - Cslib.LambdaCalculus.LocallyNameless.Fsub.Ty.Wf.all   (via: apply all ((Γ ++ Δ ++ Θ).dom ∪ free_unio; case all => apply all ((Γ ++ Δ ++ Θ).dom)
+  被依赖: Cslib.LambdaCalculus.LocallyNameless.Fsub.Ty.Wf.weaken_head
+
+----------------------------------------------------------------------
+三、边列表 (DAG edges: 依赖方 -> 被依赖方)
+----------------------------------------------------------------------
+  Cslib.Automata.NA.Buchi.inter_language_eq -> Cslib.Automata.NA.Buchi.inter_freq_comp_acc_freq_acc
+  Cslib.Automata.NA.loop_run_exists -> Cslib.Automata.NA.loop_fin_run_mtr
+  Cslib.Automata.NA.loop_run_left_right_left -> Cslib.Automata.NA.loop_run_left_right
+  Cslib.Automata.εNA.FinAcc.toNAFinAcc_language_eq -> Cslib.LTS.noε_saturate_mTr
+  Cslib.Crypto.Protocols.PerfectSecrecy.perfectlySecret_iff_indep -> Cslib.Crypto.Protocols.PerfectSecrecy.jointDist_tsum_fst
+  Cslib.FreeM.FreeState.FreeWriter.FreeCont.run_callCC -> Cslib.FreeM.FreeState.FreeWriter.FreeCont.run_liftBind_callCC
+  Cslib.FreeM.FreeState.FreeWriter.run_toWriterT -> Cslib.FreeM.FreeState.FreeWriter.FreeCont.FreeReader.run_pure
+  Cslib.LTS.IsSWBisimulation.comp -> Cslib.LTS.IsSWBisimulation.comp
+  Cslib.LambdaCalculus.LocallyNameless.Fsub.Sub.narrow_aux -> Cslib.LambdaCalculus.LocallyNameless.Fsub.Sub.weaken
+  Cslib.LambdaCalculus.LocallyNameless.Fsub.Sub.narrow_aux -> Cslib.LambdaCalculus.LocallyNameless.Fsub.Typing.wf
+  Cslib.LambdaCalculus.LocallyNameless.Fsub.Ty.Term.openRecTy_substTy -> Cslib.LambdaCalculus.LocallyNameless.Fsub.Ty.openRec_subst
+  Cslib.LambdaCalculus.LocallyNameless.Fsub.Ty.Wf.Env.Wf.narrow -> Cslib.LambdaCalculus.LocallyNameless.Fsub.Ty.Wf.Env.Wf.narrow
+  Cslib.LambdaCalculus.LocallyNameless.Untyped.Term.open_eq_app -> Cslib.LambdaCalculus.LocallyNameless.Fsub.Ty.Wf.open_lc
+  Cslib.Logic.CLL.PhaseSpace.Fact.linImpl_par -> Cslib.Logic.CLL.PhaseSpace.Fact.par_of_tensor
+  Cslib.Logic.CLL.PhaseSpace.inter_eq_orth_union_orth -> Cslib.Logic.CLL.PhaseSpace.orthogonal_def
+  Cslib.SKI.mul_correct -> Cslib.SKI.zero_correct
+  Cslib.SKI.toChurch_correct -> Cslib.SKI.zero_correct
+  Cslib.URM.Step.preserves_register -> Cslib.Language.IsRegular.zero
+  Cslib.goodSelection_exists -> Cslib.infinite_pigeonhole_principle
+  Cslib.goodSelection_exists -> Cslib.ωSequence.Step.mk
+  Cslib.ωLanguage.hmul_omegaPow_le_omegaPow -> Cslib.ωLanguage.omegaPow_coind
+  Cslib.ωSequence.drop_append_of_ge_length -> Cslib.ωSequence.get_append_right'
+  Cslib.ωSequence.drop_append_ωSequence -> Turing.StackTape.tail_cons
+  Nat.segment_upper_bound' -> Nat.base_zero_strictMono
+  Relation.RelatesInSteps.head -> Cslib.LTS.STr.single
+  Relation.RelatesInSteps.succ' -> Relation.RelatesWithinSteps.zero_iff
+  Relation.RelatesWithinSteps.trans -> Relation.RelatesWithinSteps.trans
+  Turing.SingleTapeTM.SingleTapeTM.map_toCompCfg_left_step -> Cslib.ωSequence.Step.mk
+  Turing.StackTape.head_cons -> Cslib.ωSequence.Step.mk
+  Cslib.LambdaCalculus.LocallyNameless.Fsub.Ty.Wf.open_lc -> Cslib.LambdaCalculus.LocallyNameless.Fsub.Sub.map_subst
+  Turing.StackTape.tail_cons -> Cslib.ωSequence.Step.mk
+  Relation.RelatesWithinSteps.zero_iff -> Cslib.Language.IsRegular.zero
+  Cslib.LambdaCalculus.LocallyNameless.Fsub.Sub.map_subst -> Cslib.LambdaCalculus.LocallyNameless.Fsub.Ty.Wf.weaken_head
+  Cslib.LambdaCalculus.LocallyNameless.Fsub.Ty.Wf.weaken_head -> Cslib.LambdaCalculus.LocallyNameless.Fsub.Ty.Wf.weaken
